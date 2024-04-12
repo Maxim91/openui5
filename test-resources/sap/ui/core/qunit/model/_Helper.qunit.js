@@ -1,0 +1,32 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define([
+	"sap/base/Log",
+	"sap/base/util/deepEqual",
+	"sap/base/util/extend",
+	"sap/base/util/merge",
+	"sap/ui/model/_Helper"
+], function (Log, deepEqual, extend, merge, _Helper) {
+	/*global QUnit */
+	"use strict";
+
+	//*********************************************************************************************
+	QUnit.module("sap.ui.model._Helper", {
+		beforeEach : function () {
+			this.oLogMock = this.mock(Log);
+			this.oLogMock.expects("warning").never();
+			this.oLogMock.expects("error").never();
+		}
+	});
+
+	//*********************************************************************************************
+	QUnit.test("trampoline properties", function (assert) {
+		assert.strictEqual(_Helper.deepEqual, deepEqual);
+		assert.strictEqual(_Helper.extend, extend);
+		assert.strictEqual(_Helper.merge, merge);
+	});
+
+});

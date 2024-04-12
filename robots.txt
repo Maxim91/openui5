@@ -1,0 +1,4 @@
+
+User-agent: *
+Disallow: /docs/
+Sitemap: https://openui5.hana.ondemand.com/sitemap.xml

@@ -1,0 +1,115 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loio08050365ef9f4777af7b3c139fdb0d82" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">What's New in OpenUI5
+		1.89</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">What's New in OpenUI5
+		1.89</h2></div><div class="shortdesc">With
+		this release OpenUI5 is upgraded
+		from version 1.88 to 1.89.</div><section id="section_r5v_3h5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Demo Kit Feedback</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_e2h_2vq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Demo Kit Improvements</span></p>
+								<p>Here are some Demo Kit improvements that we implemented based on
+									your feedback:</p>
+								<ul class="ul ">
+									<li class="li">
+										<p>You can now quickly cancel the global search by pressing
+												<span class="keyWrap"><kbd class="key">Esc</kbd></span>.</p>
+									</li>
+									<li class="li"><p>We implemented a copy button in all code samples in the
+												<span class="ph uicontrol">Documentation</span>
+											section:</p><img src="WN_1_89_DemoKit_Copy_Button_5757eab.png" usemap="#"></li>
+									<li class="li"><p>We added a link for
+											each API in the Demo Kit and you can now go directly to
+											the source code file in GitHub:</p><img src="WN_1_89_DemoKit_GitHub_Link_92d89d9.png" usemap="#"></li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_qwl_pb5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_tpj_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V2 Model</span></p>
+								<p>You can now provide unit and currency customizing for the
+										<code>sap.ui.model.odata.type.Unit</code> and
+										<code>sap.ui.model.odata.type.Currency</code> data types
+									as part of the data service. For more information, see <a href="#/topic/6c47b2b39db9404582994070ec3d57a2.html#loioaa9024c7c5444822a68daeb21a92bd51" title="For amounts or measures you may sometimes need different currencies or units than defined in the CLDR. The sap.ui.model.odata.type.Currency and sap.ui.model.odata.type.Unit data types enable you to use code lists with customizing for currency codes and units." class="sap-doc">Currency and Unit Customizing in OData V2</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V4 Model</span></p>
+								<p>Additional targets are now supported for <a href="#/topic/fbe1cb5613cf4a40a841750bf813238e.html" title="The OData V4 model supports server messages sent via an OData V4 service." class="sap-doc">server
+										messages</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 Data
+										Types</span></p>
+								<p>The <code>preserveDecimals</code> format option introduced in
+										<code>sap.ui.core.format.NumberFormat</code> with OpenUI5 1.87 is now enabled by default, unless the
+										<code>style</code> format option is set to either
+										<code>short</code> or <code>long</code>. This
+									applies to the following data types:</p>
+								<ul class="ul ">
+									<li class="li"><code>sap.ui.model.type.Currency</code></li>
+									<li class="li"><code>sap.ui.model.type.Float</code></li>
+									<li class="li"><code>sap.ui.model.type.Unit</code></li>
+									<li class="li"><code>sap.ui.model.odata.type.Currency</code></li>
+									<li class="li"><code>sap.ui.model.odata.type.Decimal</code></li>
+									<li class="li"><code>sap.ui.model.odata.type.Double</code></li>
+									<li class="li"><code>sap.ui.model.odata.type.Single</code></li>
+									<li class="li"><code>sap.ui.model.odata.type.Unit</code></li>
+								</ul>
+								<p>This change fixes the shortcoming that displayed values can be truncated if the back end
+									provides more decimals than accounted for on the UI. It is also
+									a prerequisite for highlighting all instances of invalid data
+									entered by the user if the same property is displayed in
+									multiple places on the UI.</p>
+								<p>However, in some cases it can be necessary to display a value
+									with fewer decimals than actually exist for the property. You
+									would then need to add the <code>preserveDecimals</code>
+									format option with a value of <code>false</code> to the type
+									instance.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_rqn_wd5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_qcq_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.Link</code>,
+											<code>sap.m.ObjectIdentifier</code>,
+											<code>sap.m.ObjectNumber</code>,
+											<code>sap.m.ObjectStatus</code>, and
+											<code>sap.ui.unified.Currency</code></span></p>
+								<p>Similar to the <code>sap.m.Text</code> control, these
+									controls now also implement the new
+										<code>emptyIndicatorMode</code> property. It allows
+									developers to display an empty text as a language dependent “-”
+									symbol.</p>
+							</td>
+						</tr>
+						
+						
+						
+						
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.ui.layout.form.Form</code>,
+											<code>sap.ui.layout.form.SimpleForm</code></span></p>
+								<p>You can now define up to six columns in extra-large size in a
+									form. For more information, see the <a href="#/api/sap.ui.layout.form.ColumnsXL" title="#/api/sap.ui.layout.form.ColumnsXL" class="sap-doc" alt="#/api/sap.ui.layout.form.ColumnsXL">API Reference</a>,
+										the <a href="#/entity/sap.ui.layout.form.Form" title="#/entity/sap.ui.layout.form.Form" class="sap-doc" alt="#/entity/sap.ui.layout.form.Form">Samples</a> for
+											<code>Form</code>, and the <a href="#/entity/sap.ui.layout.form.SimpleForm" title="#/entity/sap.ui.layout.form.SimpleForm" class="sap-doc" alt="#/entity/sap.ui.layout.form.SimpleForm">Samples</a> for
+											<code>SimpleForm</code>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink"><br><strong>Parent topic: </strong><a href="topic/6660a59a8a22460a91fe65a0d96a567e">Previous Versions</a></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="relatedLinks"><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"><li><a href="topic/5a184109b1ec44e7ab7e43d40ef56847">What's New in OpenUI5 1.101</a></li><li><a href="topic/5deb78f36022473487be44cb3a71140a">What's New in OpenUI5 1.100</a></li><li><a href="topic/5e35c2512e014e3b9831afd1cd041ed4">What's New in OpenUI5 1.99</a></li><li><a href="topic/7aacb4e107c44c90b5b0dd97fcb1f333">What's New in OpenUI5 1.98</a></li><li><a href="topic/f21858fa6a07451c9cb86e0c023a7092">What's New in OpenUI5 1.97</a></li><li><a href="topic/b39a11b47d994e9cb81c7e80946ed976">What's New in OpenUI5 1.96</a></li><li><a href="topic/1b094659cfcf422c968ce17d39f89211">What's New in OpenUI5 1.95</a></li><li><a href="topic/2d6ffddd26dd41ba91a5cf1b38f6b0f6">What's New in OpenUI5 1.94</a></li><li><a href="topic/e9c83569a4a54f04a349c4152358f4ff">What's New in OpenUI5 1.93</a></li><li><a href="topic/1492551a0b8d4f58adc46eefcf58a2fa">What's New in OpenUI5 1.92</a></li><li><a href="topic/75777daa78734f2db4e4c8a8124c0644">What's New in OpenUI5 1.91</a></li><li><a href="topic/b47520229109430cba291b5290848c08">What's New in OpenUI5 1.90</a></li><li><a href="topic/bda141b86c464e5bad7c0a0cc9dee753">What's New in OpenUI5 1.88</a></li><li><a href="topic/e315108a469f4a729030299a3bc84b77">What's New in OpenUI5 1.87</a></li><li><a href="topic/067e2fb0165145a5ac9b128b5853f7c9">What's New in OpenUI5 1.86</a></li><li><a href="topic/eeb5bd913fe448598e0449050143027a">What's New in OpenUI5 1.85</a></li><li><a href="topic/ccf76b76327c421e9d87ff7fc3d7ba41">What's New in OpenUI5 1.84</a></li><li><a href="topic/f081cf0a64784c62aa653e80036659f0">What's New in OpenUI5 1.82</a></li><li><a href="topic/f71563ccd2294cf0a59d16b62be0f7eb">What's New in OpenUI5 1.81</a></li><li><a href="topic/3294c688331c4e918a22dc0bb0892ff8">What's New in OpenUI5 1.80</a></li><li><a href="topic/edf8e35377d4452491cdc488030feb13">What's New in OpenUI5 1.79</a></li><li><a href="topic/d176be37229a45dbb1d6d0a1ae2f3167">What's New in OpenUI5 1.78</a></li><li><a href="topic/2ec6b6b03ee249928bba929eec3d2d74">What's New in OpenUI5 1.77</a></li><li><a href="topic/b9b0a3f223c14b9d99e0d86e649cafec">What's New in OpenUI5 1.76</a></li><li><a href="topic/dc3d3ce46105441db5543049fb1c11e7">What's New in OpenUI5 1.75</a></li><li><a href="topic/21fc6cb77b0c44aab55f045812e69c98">What's New in OpenUI5 1.74</a></li><li><a href="topic/7b826642c45d4b8d97c5013cdc240ad6">What's New in OpenUI5 1.73</a></li><li><a href="topic/25e532617b7f4b9bad842757324151ed">What's New in OpenUI5 1.72</a></li><li><a href="topic/609fd015eaf64bd2a4a5c0331590eb4c">What's New in OpenUI5 1.71</a></li><li><a href="topic/4e89fee547a24385826cddcfdf4df238">What's New in OpenUI5 1.70</a></li><li><a href="topic/41203fd3272b479d8c665357e3b21a43">What's New in OpenUI5 1.69</a></li><li><a href="topic/5531aef1adc8462392a5b8fe1178606e">What's New in OpenUI5 1.68</a></li><li><a href="topic/0968958c4143469d941dbe3b59e06142">What's New in OpenUI5 1.67</a></li><li><a href="topic/ebe7fda555aa466782090053d6f54f21">What's New in OpenUI5 1.66</a></li><li><a href="topic/9d2b1897722a4e99b60580fb09aa35e0">What's New in OpenUI5 1.65</a></li><li><a href="topic/1975e304ab924fb3b799240fdd9fe59b">What's New in OpenUI5 1.64</a></li><li><a href="topic/77e1dcc27c494d60ba0a03759b706e89">What's New in OpenUI5 1.63</a></li><li><a href="topic/27eea38eeb7b40d19d0dfe3ddf513175">What's New in OpenUI5 1.62</a></li><li><a href="topic/de4d50b6c0f649fa859e4657ff8557a6">What's New in OpenUI5 1.61</a></li><li><a href="topic/2a70354a2a38492a873333edc4b9a303">What's New in OpenUI5 1.60</a></li><li><a href="topic/b28edde1f4ad425d9247f3bbcdc5d9b7">What's New in OpenUI5 1.58</a></li><li><a href="topic/53b4b5ec2c83408a8da2cb6b9154c246">What's New in OpenUI5 1.56</a></li><li><a href="topic/f29023ebf9dc4a43b98516a5e2c43837">What's New in OpenUI5 1.54</a></li><li><a href="topic/a09dd79a24c041d288402768558a1d1a">What's New in OpenUI5 1.52</a></li><li><a href="topic/a8449849c81249bb8abd98b4b9342a4a">What's New in OpenUI5 1.50</a></li><li><a href="topic/2818f800e7424c5c91dbd495f8cb757b">What's New in OpenUI5 1.48</a></li><li><a href="topic/4cf0986450ca43e5a8d12dd66e999a77">What's New in OpenUI5 1.46</a></li><li><a href="topic/05ce1dc72c74475bada39234f6721f21">What's New in OpenUI5 1.44</a></li><li><a href="topic/4768f1ac7f0645929b4e9ea9981bb65e">What's New in OpenUI5 1.42</a></li><li><a href="topic/e659bd2383524a05b716916bcda9b368">What's New in OpenUI5 1.40</a></li><li><a href="topic/6a875f998994489483e8085705347d72#loio6a875f998994489483e8085705347d72">What's New in OpenUI5 1.38</a></li></ul></section></div></section></div></body></html>

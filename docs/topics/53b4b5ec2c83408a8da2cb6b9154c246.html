@@ -1,0 +1,416 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loio53b4b5ec2c83408a8da2cb6b9154c246" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">What's New in OpenUI5
+		1.56</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">What's New in OpenUI5
+		1.56</h2></div><div class="shortdesc">With
+		this release, OpenUI5 is
+		upgraded from version 1.54 to 1.56.</div><section id="section_yxw_pxt_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">New Features</h2></div><div class="fig"><section>
+				<h3 class="title ">New Event Handler Parameter Syntax</h3>
+				<p>When event handlers are assigned to control events in XML views, you can now also
+					specify parameters which can be passed to the event handler. The parameters can
+					be static values as well as bindings and even expressions. This feature helps to
+					reduce controller code and avoid unnecessary controller methods, and separates
+					the controller logic from the retrieval of the required input values.</p>
+				<section class="lang-xml"><div class="fig fig-codeblock"><div class="copyButton"><span style="display: none;">Hidden</span></div><div class="codeblock-wrapper"><pre class="codeblock">&lt;Button text="Add Product" press=".modifyList('add ', ${products&gt;unitPrice})"/&gt;</pre></div></div></section>
+				<p>For more information, see <a href="#/topic/b0fb4de7364f4bcbb053a99aa645affe.html" title="XML views use event handlers as attributes: The attribute name is the event name, such as &quot;press&quot; for a button, and the attribute value is the event handler name." class="sap-doc">Handling Events in XML Views</a>.</p>
+			</section><section>
+				<h3 class="title ">Support Assistant</h3>
+				<p>The Support Assistant now allows you to import and export your rule selection.
+					This helps you when you want to perform more than one analysis with the same
+					subset of selected rules. The selection is exported as a <code>.json</code>
+					file with a title and description of your choice. You can then import this file
+					and load it whenever you want to execute the same rules in another analysis.</p>
+				<img src="Support_Assistant_Import_Export_1_56_916079a.png" usemap="#">
+				<p>For more information, see <a href="#/topic/3fc864acf926406194744375aa464fe7.html" title="The user interface of the Support Assistant lets you choose which rules you can load for a library. It also allows you to organize your Rules view according to your preference and to import and export predefined rule selections." class="sap-doc">Rules Management</a>.</p>
+			</section><section>
+				<h3 class="title ">XML Composite Control</h3>
+				<p>A new type of composite
+					control,
+					the XML composite control, is now available. It let's you
+					build more flexible controls that contain separate XML and JavaScript parts. For more
+						information, see the <a href="#/api/sap.ui.core.XMLComposite" title="#/api/sap.ui.core.XMLComposite" class="sap-doc" alt="#/api/sap.ui.core.XMLComposite">API Reference</a> and the <a href="#/entity/sap.ui.core.XMLComposite" title="#/entity/sap.ui.core.XMLComposite" class="sap-doc" alt="#/entity/sap.ui.core.XMLComposite">Samples</a>.
+				</p>
+				
+				
+			</section></div></section><section id="section_bkm_s15_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">New Controls</h2></div><div class="fig"><ul class="ul ">
+				
+				
+			</ul></div></section><section id="section_qwl_pb5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Features</h2></div><div class="fig"><section>
+				<h3 class="title ">OpenUI5
+					OData V4 Model</h3>
+				<p>The new version of the OpenUI5 OData V4
+					model has the following features:</p><ul class="ul ">
+						<li class="li">
+							<p>Binding parameter <code>$$ownRequest</code> to enforce that a
+								binding sends its own requests.</p>
+						</li>
+						<li class="li">
+							<p>Binding parameter <code>$$aggregation</code> to display
+								aggregated data.</p>
+							<div class="note   "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Note
+				</strong></div></div><div class="fig"><p>
+								</p><p>This feature is still a work in progress. So far it supports
+									displaying a flat list of aggregated data or grouping by one
+									groupable property without being able to expand.</p>
+							<p></p></div></div>
+						</li>
+						<li class="li">
+							<p>The refresh of a single row in an absolute list binding can now also
+								take filters into account .</p>
+						</li>
+						<li class="li">
+							<p>When executing a deferred bound operation, the result of the promise
+								returned by <code>v4.ODataContextBinding#execute</code> is the
+								context representing the data of the bound operation response if
+								certain conditions are fulfilled. For more information check the API
+								for .</p>
+						</li>
+					</ul><p></p>
+				<div class="note restriction  "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Restriction
+				</strong></div></div><div class="fig"><p>
+					</p><p>Due to the limited feature scope of this version of the OpenUI5 OData V4
+						model, check that all required features are in place before developing
+						applications. Check the detailed documentation of the features, as certain
+						parts of a feature may be missing. While we aim to be compatible with
+						existing controls, some controls might not work due to small
+						incompatibilities compared to
+							<code>sap.ui.model.odata.(v2.)ODataModel</code>, or due to missing
+						features in the model (such as tree binding). This also applies to  controls such as
+							<code>TreeTable</code> and <code>AnalyticalTable</code>, which
+						are not supported together with the OpenUI5 OData V4
+						model. The interface for applications has been changed for easier and more
+						efficient use of the model. For a summary of these changes, see <a href="#/topic/abd4d7c7548d4c29ab8364d3904a6d74.html" title="This section outlines the main differences between the OData V2 and OData V4 models." class="sap-doc">Changes Compared to OData V2 Model</a>.</p>
+				<p></p></div></div>
+				
+				<p>For more
+					information, see <a href="#/topic/5de13cf4dd1f4a3480f7e2eaaee3f5b8.html" title="The sap.ui.model.odata.v4.ODataModel is the model implementation for consuming an OData V4 service." class="sap-doc">OData V4 Model</a>, the
+						<a href="#/api/sap.ui.model.odata.v4" title="#/api/sap.ui.model.odata.v4" class="sap-doc" alt="#/api/sap.ui.model.odata.v4">API Reference</a>, and the <a href="#/entity/sap.ui.model.odata.v4.ODataModel" title="#/entity/sap.ui.model.odata.v4.ODataModel" class="sap-doc" alt="#/entity/sap.ui.model.odata.v4.ODataModel">Sample</a> in the Demo Kit. </p>
+			</section><section>
+				<h3 class="title ">Support Assistant</h3>
+				
+			</section><ul class="ul ">
+				<li class="li">
+					<p><code>sap.ui.support.ExecutionScope.getElements</code> has a new
+						parameter <code>cloned</code>. It allows users of the Support Assistant
+						to filter out elements that are clones of list bindings. Now the results
+						will include only the representative clone. For
+							more information, see the <a href="#/api/sap.ui.support.ExecutionScope/methods/Summary" title="#/api/sap.ui.support.ExecutionScope/methods/Summary" class="sap-doc" alt="#/api/sap.ui.support.ExecutionScope/methods/Summary">API Reference</a>.</p>
+				</li>
+				<li class="li">
+					<p>A <span class="ph uicontrol">Filter</span> view showing the currently applied filter has
+						been added to the <span class="ph uicontrol">Issues</span> view of the Support
+						Assistant. The <span class="ph uicontrol">Clear Filtering</span> button (<img src="Clear_filter_icon_4a0cf3b.png" usemap="#">)
+						has moved to the <span class="ph uicontrol">Filter</span> view. It is active only when
+						there is a filter selected.</p>
+				</li>
+				<li class="li">
+					<p>An explanatory note has been added to the <span class="ph uicontrol">Additional
+							Rulesets</span> view under the header to give more clarity about
+						the function of these rulesets and why they are in a separate tab.</p>
+				</li>
+				<li class="li">
+					<p>The <span class="ph uicontrol">Report</span> button is now fixed to the panel to be
+						always visible and not to get into the overflow.</p>
+				</li>
+				<li class="li">
+					<p>The font sizes are aligned across all three views for consistency.</p>
+				</li>
+				<li class="li">
+					<p>In the <span class="ph uicontrol">Issues</span> view the number of issues is only
+						highlighted when there are issues of medium and high severity. This
+						improvement helps to easily see the distribution of the issues by
+						severity.</p>
+				</li>
+			</ul><img src="Support_Assistant_UI_improvements_1_56_8830117.png" usemap="#"><section>
+				<h3 class="title ">Drag and Drop</h3>
+				<p>Configuration for dragging has been separated from the one for dropping. This
+					allows you to also perform drag-and-drop operations, for example, from one view
+					to another. For more
+						information, see the <a href="#/api/sap.ui.core.dnd.DragInfo" title="#/api/sap.ui.core.dnd.DragInfo" class="sap-doc" alt="#/api/sap.ui.core.dnd.DragInfo">API Reference for
+								<code>DragInfo</code></a>, the <a href="#/api/sap.ui.core.dnd.DropInfo" title="#/api/sap.ui.core.dnd.DropInfo" class="sap-doc" alt="#/api/sap.ui.core.dnd.DropInfo">API Reference for
+								<code>DropInfo</code></a>, and the <a href="#/sample/sap.m.sample.TableDnD/preview" title="#/sample/sap.m.sample.TableDnD/preview" class="sap-doc" alt="#/sample/sap.m.sample.TableDnD/preview">Sample</a>.</p>
+			</section><section>
+				<h3 class="title ">Drag and Drop: General Support
+					(experimental)</h3>
+				
+				<p>Drag and drop has been enabled for <span class="emphasis">all</span> controls (with the
+					new <code>dragDropConfig</code> aggregation) in
+						<code>sap.ui.core.Element</code>.</p>
+				<div class="note restriction  "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Restriction
+				</strong></div></div><div class="fig"><p>
+					</p><p>This function is not intended for production use except for the controls for
+						which drag and drop has already been enabled in previous versions (for
+						example, for tables and lists). </p>
+				<p></p></div></div>
+				For more
+					information, see the <a href="#/api/sap.ui.core.Element/aggregations" title="#/api/sap.ui.core.Element/aggregations" class="sap-doc" alt="#/api/sap.ui.core.Element/aggregations">API Reference</a>
+						(<code>dragDropConfig</code> aggregation).
+			</section></div></section><section id="section_rqn_wd5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved Controls</h2></div><div class="fig"><ul class="ul ">
+				<li class="li">
+					<p><code>sap.f.DynamicPageHeader</code>: The expand/collapse arrow and the
+						pin/unpin buttons now have a new visual design. They are centered at the
+						bottom header border next to each other. The interaction behavior is
+						improved and you can now collapse a pinned header with a title tap or click
+						or by choosing the expand/collapse arrow. This means that the pinned state
+						now prevents the header from collapsing only when the user is scrolling the
+							page. For
+							more information, see the <a href="#/sample/sap.f.sample.DynamicPageFreeStyle/preview" title="#/sample/sap.f.sample.DynamicPageFreeStyle/preview" class="sap-doc" alt="#/sample/sap.f.sample.DynamicPageFreeStyle/preview">Sample</a>.</p><div class="note   "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Note
+				</strong></div></div><div class="fig"><p>The above
+							functionality and visual appearance is also maintained when using the
+							dynamic header of the <code>sap.uxap.ObjectPage</code>
+							control.</p></div></div><p></p>
+				</li>
+				
+				<li class="li">
+					<p><code>sap.m.DateTimePicker</code>: Two new properties are added to the
+						control - <code>minutesStep</code> and <code>secondsStep</code>.
+						They allow configuring the value step for the minutes and seconds sliders.
+						For example, if you need the values for the minutes inside the slider to be
+						multiples of 5, you can use the option - <code>minutesStep:5</code>. For
+							more information, see the <a href="#/api/sap.m.DateTimePicker" title="#/api/sap.m.DateTimePicker" class="sap-doc" alt="#/api/sap.m.DateTimePicker">API Reference</a> and the <a href="#/sample/sap.m.sample.DateTimePicker/preview" title="#/sample/sap.m.sample.DateTimePicker/preview" class="sap-doc" alt="#/sample/sap.m.sample.DateTimePicker/preview">Sample</a>.
+					</p>
+				</li>
+				<li class="li">
+					<p><code>sap.m.IconTabBar</code>:</p><ul class="ul ">
+							<li class="li">
+								<p>Drag and drop between the header and the overflow list is now
+									possible. When you hover over the overflow button with a dragged
+									element, an overflow list opens and you can drag an item from
+									the header to the list. For more information, see the <a href="#/api/sap.m.IconTabHeader" title="#/api/sap.m.IconTabHeader" class="sap-doc" alt="#/api/sap.m.IconTabHeader">API Reference</a> and
+										the <a href="#/sample/sap.m.sample.IconTabBarDragDrop/preview" title="#/sample/sap.m.sample.IconTabBarDragDrop/preview" class="sap-doc" alt="#/sample/sap.m.sample.IconTabBarDragDrop/preview">Sample</a>.</p>
+							</li>
+							<li class="li">
+								<p>A new <code>TabDensityMode</code> property is introduced in
+									both <code>sap.m.IconTabBar</code> and
+										<code>sap.m.IconTabHeader</code>. The property allows
+									both the Tab Bar and the Header to change their density within
+									different controls. For more information, see the <a href="#/api/sap.m.IconTabBar" title="#/api/sap.m.IconTabBar" class="sap-doc" alt="#/api/sap.m.IconTabBar">API Reference</a> and
+										the <a href="#/sample/sap.m.sample.IconTabBarTabDensityMode/preview" title="#/sample/sap.m.sample.IconTabBarTabDensityMode/preview" class="sap-doc" alt="#/sample/sap.m.sample.IconTabBarTabDensityMode/preview">Sample</a>.</p>
+							</li>
+						</ul><p></p>
+				</li>
+				<li class="li">
+					<p><code>sap.m.List</code>: The <code>columns</code> aggregation was
+						deprecated in version 1.16 and has now been removed. Use the
+							<code>sap.m.Table</code> control instead.</p>
+				</li>
+				<li class="li">
+					<p><code>sap.m.MenuButton</code>: The control now has a new
+							<code>menuPosition</code> property. It specifies the position of the
+						popup menu with enlisted options. By default, the menu opens at the bottom
+						left side of the control but if there is not enough space in the current
+						window, it tries to open on the opposite side. For
+							more information, see the <a href="#/api/sap.m.MenuButton" title="#/api/sap.m.MenuButton" class="sap-doc" alt="#/api/sap.m.MenuButton">API Reference</a> and the <a href="#/sample/sap.m.sample.MenuButton/preview" title="#/sample/sap.m.sample.MenuButton/preview" class="sap-doc" alt="#/sample/sap.m.sample.MenuButton/preview">Sample</a>.</p>
+				</li>
+				<li class="li">
+					<p><code>sap.m.PlanningCalendar:</code></p><ul class="ul ">
+							<li class="li">
+								<p>The new <code>appointmentDragEnter</code> event allows
+									appointments to be dragged and dropped between calendar rows. By
+									default, when the <code>enableAppointmentDragAndDrop</code>
+									property is enabled, appointments can be dragged only within
+									their original <code>PlanningCalendarRow</code>. When
+										<code>enableAppointmentsDragAndDrop</code> is set to
+									true, attaching the event handler to the
+										<code>appointmentDragEnter</code> event can change the
+									default behavior and allow appointments to be dragged on the
+									same row and between calendar rows.</p>
+							</li>
+							<li class="li">
+								<p>Appointments can now be created in one
+										<code>PlanningCalendarRow</code> by dragging with the
+									mouse on an empty cell. This behavior is enabled with the
+										<code>enableAppointmentCreate</code> boolean property.
+									When creating is finished, an <code>appointmentCreate</code>
+									event is fired.</p>
+							</li>
+							<li class="li">
+								<p>The new <code>enableAppointmentResize</code> boolean property
+									provides the possibility to resize appointments in one
+										<code>PlanningCalendarRow</code>. When resizing is
+									finished, an <code>appointmentResize</code> event is
+									fired.</p>
+							</li>
+							<li class="li"><p>A new functionality to copy appointments by dragging them is
+									added on the <code>PlanningCalendarRow</code> level. When
+									you press <span class="keyWrap"><kbd class="key">Ctrl</kbd></span>/<span class="keyWrap"><kbd class="key">Cmd</kbd></span> while dragging an
+									appointment, dropping it will create a copy.</p>
+								For more information, see the <a href="#/api/sap.m.PlanningCalendarRow" title="#/api/sap.m.PlanningCalendarRow" class="sap-doc" alt="#/api/sap.m.PlanningCalendarRow">API Reference</a> and the
+										<a href="#/sample/sap.m.sample.PlanningCalendarDnD/preview" title="#/sample/sap.m.sample.PlanningCalendarDnD/preview" class="sap-doc" alt="#/sample/sap.m.sample.PlanningCalendarDnD/preview">Sample</a>.
+							</li>
+						</ul><p></p>
+				</li>
+				<li class="li">
+					<p><code>sap.m.PlanningCalendarRow</code>: The new
+							<code>specialDates</code> aggregation allows you to mark special
+						days on a row level. The aggregation is of type
+							<code>sap.ui.unified.DayTypeRange</code> but you can set a specific
+						type to the corresponding date. For
+							more information, see the <a href="#/api/sap.m.PlanningCalendarRow/aggregations" title="#/api/sap.m.PlanningCalendarRow/aggregations" class="sap-doc" alt="#/api/sap.m.PlanningCalendarRow/aggregations">API Reference</a> and the <a href="#/sample/sap.m.sample.PlanningCalendarWithLegend/preview" title="#/sample/sap.m.sample.PlanningCalendarWithLegend/preview" class="sap-doc" alt="#/sample/sap.m.sample.PlanningCalendarWithLegend/preview">Sample</a>.</p>
+				</li>
+				<li class="li">
+					<p><code>sap.m.SelectDialog</code>: With the new <code>growing</code>
+						property, you can control the progressive loading of bound items. By
+						default, it is set to <code>true</code> which means that features like
+						the number of selected items in the info bar and search (if present) will
+						work only for the currently loaded items. To make sure that all items in the
+						table are loaded at once, and the above features work properly, you should
+						set the growing property to <code>false</code>.</p><div class="note   "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Note
+				</strong></div></div><div class="fig"><p>
+							</p><p>The growing functionality cannot be used together with two-way
+								binding.</p>
+						<p></p></div></div>
+						For
+							more information, see the <a href="#/api/sap.m.SelectDialog/controlProperties" title="#/api/sap.m.SelectDialog/controlProperties" class="sap-doc" alt="#/api/sap.m.SelectDialog/controlProperties">API Reference</a>.<p></p>
+				</li>
+				<li class="li"><p><code>sap.m.Slider / sap.m.RangeSlider</code>: </p><ul class="ul ">
+							<li class="li">
+								<p>You can create a custom scale (for example, with dates) for the
+									sliders. To do this, you need to add custom scale and implement
+									the <code>Iscale</code> interface.</p>
+							</li>
+							<li class="li">
+								<p>You can create a custom tooltip, by extending the class
+										<code>sap.m.SliderTooltipBase</code> and overriding some
+									methods. If you want to define your own content for the tooltip,
+									you should override just the
+										<code>renderTooltipContent</code> method.</p>
+							</li>
+						</ul><p></p><p>For more
+						information, see <a href="#/topic/84ec82e7498345ccbfcd754d4578313b.html" title="84ec82e7498345ccbfcd754d4578313b.xml" class="sap-doc">Sliders</a> and
+						the <a href="#/api/sap.m.Slider/controlProperties" title="#/api/sap.m.Slider/controlProperties" class="sap-doc" alt="#/api/sap.m.Slider/controlProperties">API Reference</a>.</p></li>
+				<li class="li">
+					<p><code>sap.m.Table</code>: </p><ul class="ul ">
+							<li class="li"><p>The new <code>sticky</code> property enables the column
+									headers, infobar, and toolbar to remain in a fixed position at
+									the top of the page during vertical scrolling.</p><div class="note   "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Note
+				</strong></div></div><div class="fig"><p>
+									</p><p>The API has changed slightly compared to the experimental API
+										provided in version 1.54.</p>
+								<p></p></div></div>For more information, see the <a href="#/api/sap.m.Table/methods/getSticky" title="#/api/sap.m.Table/methods/getSticky" class="sap-doc" alt="#/api/sap.m.Table/methods/getSticky">API Reference</a> and the
+										<a href="#/sample/sap.ui.comp.sample.smarttable.mtableSticky/preview" title="#/sample/sap.ui.comp.sample.smarttable.mtableSticky/preview" class="sap-doc" alt="#/sample/sap.ui.comp.sample.smarttable.mtableSticky/preview">Sample</a>.</li>
+							<li class="li">The <code>popinLayout</code> property is now also supported for
+								Microsoft Edge (version 16 and higher). For more information, see the <a href="#/api/sap.m.Table/controlProperties" title="#/api/sap.m.Table/controlProperties" class="sap-doc" alt="#/api/sap.m.Table/controlProperties">API Reference</a> and the
+										<a href="#/sample/sap.m.sample.Table/preview" title="#/sample/sap.m.sample.Table/preview" class="sap-doc" alt="#/sample/sap.m.sample.Table/preview">Sample</a>.</li>
+						</ul><p></p>
+				</li>
+				<li class="li"><code>sap.m.TableSelectDialog</code>: <ul class="ul ">
+						<li class="li">
+							<p>A new property <code>growing</code> is added to the control. It
+								determines the progressive loading. When set to
+									<code>true</code>, the features <span class="ph uicontrol">Selected
+									Count</span> in <code>Info bar</code>,
+									<span class="ph uicontrol">Search</span>, and <span class="ph uicontrol">Select/Deselect
+									All</span>, if present, will work only for the currently
+								loaded items. To ensure that all items in the table are loaded and
+								these features work as expected, you need to set the property to
+									<code>false</code>. </p><div class="note   "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Note
+				</strong></div></div><div class="fig"><p>
+									</p><p>The growing functionality cannot be used together with
+										two-way binding.</p>
+								<p></p></div></div>For more information, see the <a href="#/api/sap.m.TableSelectDialog" title="#/api/sap.m.TableSelectDialog" class="sap-doc" alt="#/api/sap.m.TableSelectDialog">API Reference</a> and the
+										<a href="#/sample/sap.m.sample.TableSelectDialogGrowing/preview" title="#/sample/sap.m.sample.TableSelectDialogGrowing/preview" class="sap-doc" alt="#/sample/sap.m.sample.TableSelectDialogGrowing/preview">Sample</a>.<p></p>
+						</li>
+						<li class="li">
+							<p>The control now has a <span class="ph uicontrol">Reset</span> button which
+								allows you to clear the selection you have made in your Table Select
+								dialog with one click. The button is enabled only when you make a
+								selection. Otherwise, it is grayed out. For more information, see the <a href="#/api/sap.m.TableSelectDialog" title="#/api/sap.m.TableSelectDialog" class="sap-doc" alt="#/api/sap.m.TableSelectDialog">API Reference</a> and the
+										<a href="#/sample/sap.m.sample.TableSelectDialog/preview" title="#/sample/sap.m.sample.TableSelectDialog/preview" class="sap-doc" alt="#/sample/sap.m.sample.TableSelectDialog/preview">Sample</a>.</p>
+						</li>
+					</ul></li>
+				<li class="li">
+					<p><code>sap.m.Tree</code>: You can now expand and collapse multiple rows at
+						once by using the related methods. For
+							more information, see the <a href="#/api/sap.m.Tree/methods/expand" title="#/api/sap.m.Tree/methods/expand" class="sap-doc" alt="#/api/sap.m.Tree/methods/expand">API Reference for the
+									<code>expand</code> method</a>, the <a href="#/api/sap.m.Tree/methods/collapse" title="#/api/sap.m.Tree/methods/collapse" class="sap-doc" alt="#/api/sap.m.Tree/methods/collapse">API Reference for the
+									<code>collapse</code> method</a>, and the <a href="#/sample/sap.m.sample.TreeExpandMulti/preview" title="#/sample/sap.m.sample.TreeExpandMulti/preview" class="sap-doc" alt="#/sample/sap.m.sample.TreeExpandMulti/preview">Sample</a>.</p>
+				</li>
+				
+				
+				<li class="li">
+					<p><code>sap.ui.core.ScrollBar</code>: The control has been deprecated. For
+							more information, see the <a href="#/api/sap.ui.core.ScrollBar" title="#/api/sap.ui.core.ScrollBar" class="sap-doc" alt="#/api/sap.ui.core.ScrollBar">API Reference</a>.</p>
+				</li>
+				<li class="li">
+					<p><code>sap.ui.layout.BlockLayout</code>: The new
+							<code>titleLink</code> aggregation allows the replacement of the
+						title of a <code>BlockLayout</code> cell with a link using the
+							<code>sap.m.Link</code> control. For
+							more information, see the <a href="#/api/sap.ui.layout.BlockLayout" title="#/api/sap.ui.layout.BlockLayout" class="sap-doc" alt="#/api/sap.ui.layout.BlockLayout">API Reference</a> and the <a href="#/sample/sap.ui.layout.sample.BlockLayoutLinkTitle/preview" title="#/sample/sap.ui.layout.sample.BlockLayoutLinkTitle/preview" class="sap-doc" alt="#/sample/sap.ui.layout.sample.BlockLayoutLinkTitle/preview">Sample</a>.</p>
+				</li>
+				<li class="li">
+					<p><code>sap.ui.layout</code> library for <code>form.Form</code>,
+							<code>form.SimpleForm</code> controls: Usability of the form controls has been improved: The form
+						content is arranged in a flexible, horizontal way depending on the number of
+						columns so the user doesn’t have to scroll unnecessarily, and no vertical
+						space is wasted. A new layout <code>ColumnLayout</code> has been created
+						for that purpose. For
+							more information, see the <a href="#/api/sap.ui.layout.form.ColumnLayout" title="#/api/sap.ui.layout.form.ColumnLayout" class="sap-doc" alt="#/api/sap.ui.layout.form.ColumnLayout">API Reference</a> and the <a href="#/sample/sap.ui.layout.sample.Form_Column_threeGroups234/preview" title="#/sample/sap.ui.layout.sample.Form_Column_threeGroups234/preview" class="sap-doc" alt="#/sample/sap.ui.layout.sample.Form_Column_threeGroups234/preview">Sample</a>.
+					</p>
+				</li>
+				<li class="li">
+					<p><code>sap.ui.unified.Calendar</code>: With the introduction of the
+							<code>weekNumberSelect</code> event, the week numbers in Gregorian
+						calendars have become interactive. The event indicates when you have clicked
+						on a week number. Keep in mind that for the event to work, the
+							<code>intervalSelection</code> property must be set to
+							<code>true</code>. For
+							more information, see the <a href="#/api/sap.ui.unified.Calendar" title="#/api/sap.ui.unified.Calendar" class="sap-doc" alt="#/api/sap.ui.unified.Calendar">API Reference</a> and the <a href="#/sample/sap.ui.unified.sample.CalendarSingleIntervalSelection/preview" title="#/sample/sap.ui.unified.sample.CalendarSingleIntervalSelection/preview" class="sap-doc" alt="#/sample/sap.ui.unified.sample.CalendarSingleIntervalSelection/preview">Sample</a>.</p>
+				</li>
+				<li class="li">
+					<p><code>sap.uxap.ObjectPageDynamicHeaderTitle</code>: UI Adaptation is
+						enabled for the control and the following actions are possible:</p><ul class="ul ">
+							<li class="li">
+								<p><span class="ph uicontrol">Move</span>, <span class="ph uicontrol">Split</span>, and
+										<span class="ph uicontrol">Combine</span> action buttons</p>
+							</li>
+							<li class="li">
+								<p><span class="ph uicontrol">Move</span> items defined in the
+										<code>snappedContent</code> and
+										<code>expandedContent</code> aggregations</p>
+							</li>
+							<li class="li">
+								<p><span class="ph uicontrol">Remove</span> and <span class="ph uicontrol">Reveal</span>
+									the whole control</p>
+							</li>
+						</ul><p></p>
+					<p>For more
+						information, see the <a href="#/sample/sap.uxap.sample.ObjectPageDynamicHeader/preview" title="#/sample/sap.uxap.sample.ObjectPageDynamicHeader/preview" class="sap-doc" alt="#/sample/sap.uxap.sample.ObjectPageDynamicHeader/preview">Sample</a> and turn on the UI
+						Adaptation using
+						the
+						wrench key button.</p>
+				</li>
+				<li class="li">
+					<p><code>sap.uxap.ObjectPageHeader</code>: The new
+							<code>titleSelectorTooltip</code> aggregation now enables you to set
+						a custom tooltip for the <code>titleSelector</code> button of the
+							<code>sap.uxap.ObjectPageHeader</code>. For
+							more information, see the <a href="#/api/sap.uxap.ObjectPageHeader/aggregations" title="#/api/sap.uxap.ObjectPageHeader/aggregations" class="sap-doc" alt="#/api/sap.uxap.ObjectPageHeader/aggregations">API Reference</a>.</p>
+				</li>
+			</ul></div></section><section id="section_z2h_fh5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Documentation</h2></div><div class="fig"><p>We have a new tutorial: <a href="#/topic/c4de2df385174e58a689d9847c7553bd.html" title="In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines." class="sap-doc">Flexible Column Layout App</a>. In this
+				tutorial, we showcase how to structure your OpenUI5 app using the
+				layout patterns that comply with the latest SAP Fiori design
+				guidelines.</p></div></section><section id="section_r5v_3h5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Demo Kit Improvements</h2></div><div class="fig"><ul class="ul ">
+				<li class="li">
+					<p>We've added a <span class="ph uicontrol">Change version</span> button in the Demo Kit's
+						toolbar that enables you to easily switch the app to a different OpenUI5
+						version.</p>
+					<div><div class="fig"><img src="DemoKit_ChangeVersion_401b0b0.png" usemap="#"></div></div>
+				</li>
+				<li class="li">
+					<p>In the <span class="ph uicontrol">API Reference</span>, at the bottom of the API tree
+						you can now find an <span class="ph uicontrol">Index by Version</span> page that
+						displays all APIs grouped by the release version they were first introduced
+						in. Each release version is displayed as a separate tab.</p>
+					<div><div class="fig"><img src="DemoKit_Index_By_Version_d47b461.png" usemap="#"></div></div>
+					<p>For more
+						information, see <span class="ph uicontrol">API Reference</span>: <a href="#/api/since" title="#/api/since" class="sap-doc" alt="#/api/since">Index by Version</a>.</p>
+				</li>
+			</ul></div></section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink"><br><strong>Parent topic: </strong><a href="topic/6660a59a8a22460a91fe65a0d96a567e">Previous Versions</a></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="relatedLinks"><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"><li><a href="topic/5a184109b1ec44e7ab7e43d40ef56847">What's New in OpenUI5 1.101</a></li><li><a href="topic/5deb78f36022473487be44cb3a71140a">What's New in OpenUI5 1.100</a></li><li><a href="topic/5e35c2512e014e3b9831afd1cd041ed4">What's New in OpenUI5 1.99</a></li><li><a href="topic/7aacb4e107c44c90b5b0dd97fcb1f333">What's New in OpenUI5 1.98</a></li><li><a href="topic/f21858fa6a07451c9cb86e0c023a7092">What's New in OpenUI5 1.97</a></li><li><a href="topic/b39a11b47d994e9cb81c7e80946ed976">What's New in OpenUI5 1.96</a></li><li><a href="topic/1b094659cfcf422c968ce17d39f89211">What's New in OpenUI5 1.95</a></li><li><a href="topic/2d6ffddd26dd41ba91a5cf1b38f6b0f6">What's New in OpenUI5 1.94</a></li><li><a href="topic/e9c83569a4a54f04a349c4152358f4ff">What's New in OpenUI5 1.93</a></li><li><a href="topic/1492551a0b8d4f58adc46eefcf58a2fa">What's New in OpenUI5 1.92</a></li><li><a href="topic/75777daa78734f2db4e4c8a8124c0644">What's New in OpenUI5 1.91</a></li><li><a href="topic/b47520229109430cba291b5290848c08">What's New in OpenUI5 1.90</a></li><li><a href="topic/08050365ef9f4777af7b3c139fdb0d82">What's New in OpenUI5 1.89</a></li><li><a href="topic/bda141b86c464e5bad7c0a0cc9dee753">What's New in OpenUI5 1.88</a></li><li><a href="topic/e315108a469f4a729030299a3bc84b77">What's New in OpenUI5 1.87</a></li><li><a href="topic/067e2fb0165145a5ac9b128b5853f7c9">What's New in OpenUI5 1.86</a></li><li><a href="topic/eeb5bd913fe448598e0449050143027a">What's New in OpenUI5 1.85</a></li><li><a href="topic/ccf76b76327c421e9d87ff7fc3d7ba41">What's New in OpenUI5 1.84</a></li><li><a href="topic/f081cf0a64784c62aa653e80036659f0">What's New in OpenUI5 1.82</a></li><li><a href="topic/f71563ccd2294cf0a59d16b62be0f7eb">What's New in OpenUI5 1.81</a></li><li><a href="topic/3294c688331c4e918a22dc0bb0892ff8">What's New in OpenUI5 1.80</a></li><li><a href="topic/edf8e35377d4452491cdc488030feb13">What's New in OpenUI5 1.79</a></li><li><a href="topic/d176be37229a45dbb1d6d0a1ae2f3167">What's New in OpenUI5 1.78</a></li><li><a href="topic/2ec6b6b03ee249928bba929eec3d2d74">What's New in OpenUI5 1.77</a></li><li><a href="topic/b9b0a3f223c14b9d99e0d86e649cafec">What's New in OpenUI5 1.76</a></li><li><a href="topic/dc3d3ce46105441db5543049fb1c11e7">What's New in OpenUI5 1.75</a></li><li><a href="topic/21fc6cb77b0c44aab55f045812e69c98">What's New in OpenUI5 1.74</a></li><li><a href="topic/7b826642c45d4b8d97c5013cdc240ad6">What's New in OpenUI5 1.73</a></li><li><a href="topic/25e532617b7f4b9bad842757324151ed">What's New in OpenUI5 1.72</a></li><li><a href="topic/609fd015eaf64bd2a4a5c0331590eb4c">What's New in OpenUI5 1.71</a></li><li><a href="topic/4e89fee547a24385826cddcfdf4df238">What's New in OpenUI5 1.70</a></li><li><a href="topic/41203fd3272b479d8c665357e3b21a43">What's New in OpenUI5 1.69</a></li><li><a href="topic/5531aef1adc8462392a5b8fe1178606e">What's New in OpenUI5 1.68</a></li><li><a href="topic/0968958c4143469d941dbe3b59e06142">What's New in OpenUI5 1.67</a></li><li><a href="topic/ebe7fda555aa466782090053d6f54f21">What's New in OpenUI5 1.66</a></li><li><a href="topic/9d2b1897722a4e99b60580fb09aa35e0">What's New in OpenUI5 1.65</a></li><li><a href="topic/1975e304ab924fb3b799240fdd9fe59b">What's New in OpenUI5 1.64</a></li><li><a href="topic/77e1dcc27c494d60ba0a03759b706e89">What's New in OpenUI5 1.63</a></li><li><a href="topic/27eea38eeb7b40d19d0dfe3ddf513175">What's New in OpenUI5 1.62</a></li><li><a href="topic/de4d50b6c0f649fa859e4657ff8557a6">What's New in OpenUI5 1.61</a></li><li><a href="topic/2a70354a2a38492a873333edc4b9a303">What's New in OpenUI5 1.60</a></li><li><a href="topic/b28edde1f4ad425d9247f3bbcdc5d9b7">What's New in OpenUI5 1.58</a></li><li><a href="topic/f29023ebf9dc4a43b98516a5e2c43837">What's New in OpenUI5 1.54</a></li><li><a href="topic/a09dd79a24c041d288402768558a1d1a">What's New in OpenUI5 1.52</a></li><li><a href="topic/a8449849c81249bb8abd98b4b9342a4a">What's New in OpenUI5 1.50</a></li><li><a href="topic/2818f800e7424c5c91dbd495f8cb757b">What's New in OpenUI5 1.48</a></li><li><a href="topic/4cf0986450ca43e5a8d12dd66e999a77">What's New in OpenUI5 1.46</a></li><li><a href="topic/05ce1dc72c74475bada39234f6721f21">What's New in OpenUI5 1.44</a></li><li><a href="topic/4768f1ac7f0645929b4e9ea9981bb65e">What's New in OpenUI5 1.42</a></li><li><a href="topic/e659bd2383524a05b716916bcda9b368">What's New in OpenUI5 1.40</a></li><li><a href="topic/6a875f998994489483e8085705347d72#loio6a875f998994489483e8085705347d72">What's New in OpenUI5 1.38</a></li></ul></section></div></section></div></body></html>

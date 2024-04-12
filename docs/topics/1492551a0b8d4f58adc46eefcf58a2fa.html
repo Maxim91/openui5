@@ -1,0 +1,149 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loio1492551a0b8d4f58adc46eefcf58a2fa" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">What's New in OpenUI5
+		1.92</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">What's New in OpenUI5
+		1.92</h2></div><div class="shortdesc">With
+		this release OpenUI5 is upgraded
+		from version 1.91 to 1.92.</div><section id="section_bkm_s15_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">New
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_ejf_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.DynamicDateRange</code>
+										(Experimental)</span></p>
+								<p>The new (experimental) <code>DynamicDateRange</code> control
+									enables users to select absolute and relative dates and date
+									ranges using a different offset from the current date.
+									Application developers can configure the list of values offered.
+									The <code>DynamicDateRange</code> control supports several
+									standard options, but as a developer, you can also define a
+									custom option that fits your specific use case. For more information, see the <a href="#/api/sap.m.DynamicDateRange" title="#/api/sap.m.DynamicDateRange" class="sap-doc" alt="#/api/sap.m.DynamicDateRange">API Reference</a> and
+										the <a href="#/entity/sap.m.DynamicDateRange" title="#/entity/sap.m.DynamicDateRange" class="sap-doc" alt="#/entity/sap.m.DynamicDateRange">Sample</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_qwl_pb5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_tpj_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V4 Model</span></p>
+								<p>The new version of the OpenUI5 OData V4 model introduces the following features:</p>
+								<ul class="ul ">
+									<li class="li">
+										<p>The
+												<code>sap.ui.model.odata.v4.Context#setKeepAlive</code>
+											method now provides an additional
+												<code>bRequestMessages</code> parameter that
+											allows you to request bound messages for the kept-alive
+											context. The message property is identified through the
+												<code>com.sap.vocabularies.Common.v1.Messages</code>
+											annotation. For more information, see <a href="#/topic/fbe1cb5613cf4a40a841750bf813238e.html" title="The OData V4 model supports server messages sent via an OData V4 service." class="sap-doc">Server Messages in the OData V4 Model</a>.
+										</p>
+									</li>
+									<li class="li">
+										<p>You can now execute actions with the
+												<code>Prefer</code> header
+												<code>handling=strict</code>. For more
+											information, see <a href="#/topic/b54f7895b7594c61a83fa7257fa9d13f.html#loiob54f7895b7594c61a83fa7257fa9d13f/section_SH" title="b54f7895b7594c61a83fa7257fa9d13f.xml#loiob54f7895b7594c61a83fa7257fa9d13f/section_SH" class="sap-doc">Strict Handling</a>.</p>
+									</li>
+									<li class="li">
+										<p>We now support absolute property bindings of
+												<code>$count</code>. Note that this will display
+											the count as it is provided by the server. If a count
+											that includes transient entries is required, the header
+											context has to be used. For more information, see <a href="#/topic/77d2310b637b490495d78b393ed6aa64.html" title="77d2310b637b490495d78b393ed6aa64.xml" class="sap-doc">Binding Collection Inline Count</a>.</p>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_rqn_wd5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_qcq_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.Dialog</code></span></p>
+								<p>We have updated the colors of value-state status icons. Now, they
+									have better color-contrast ratios for improved accessibility.
+										For more information, see the <a href="#/entity/sap.m.Dialog/sample/sap.m.sample.DialogMessage" title="#/entity/sap.m.Dialog/sample/sap.m.sample.DialogMessage" class="sap-doc" alt="#/entity/sap.m.Dialog/sample/sap.m.sample.DialogMessage">Sample</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.List, sap.m.Table,
+										sap.m.Tree</code></span></p>
+								<p>We have provided the new <code>requestItems</code> method
+									that lets you load more data in a control. You can now trigger
+									the growing feature manually, if the <code>growing</code>
+									property is set to <code>true</code>. For more information, see the <a href="#/api/sap.m.ListBase%23methods/requestItems" title="#/api/sap.m.ListBase%23methods/requestItems" class="sap-doc" alt="#/api/sap.m.ListBase%23methods/requestItems">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.QuickViewPage</code></span></p>
+								<p>The control now supports avatars, which display business objects,
+									images, initials, and more. To enable this functionality, the
+										<code>QuickViewPage</code> control uses
+										<code>sap.m.Avatar</code> as an aggregation. The
+										<code>icon</code> and <code>fallbackIcon</code>
+									properties of the <code>QuickViewPage</code> are now
+									deprecated. Instead, developers should use the functionality of
+									the new <code>avatar</code> aggregation. For more information, see the <a href="#/api/sap.m.QuickViewPage" title="#/api/sap.m.QuickViewPage" class="sap-doc" alt="#/api/sap.m.QuickViewPage">API Reference</a> and
+										the <a href="#/entity/sap.m.QuickView/sample/sap.m.sample.QuickViewAvatarConfiguration" title="#/entity/sap.m.QuickView/sample/sap.m.sample.QuickViewAvatarConfiguration" class="sap-doc" alt="#/entity/sap.m.QuickView/sample/sap.m.sample.QuickViewAvatarConfiguration">Sample</a>.</p>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.ui.integration.widgets.Card</code></span></p>
+								<p>The charts in the Analytical card now support (in experimental
+									state) interactions on the detail level. Until now, users could
+									only interact with the whole content area. Now, the user can
+									click on separate points of the charts. As an application
+									developer you can configure two optional scenarios upon click:
+										</p><ul class="ul ">
+										<li class="li">
+											<p>Trigger navigation actions defined by the
+												<code>actionableArea</code> (experimental)
+												property.</p>
+										</li>
+										<li class="li">
+											<p>Open a popover with more details about the selected
+												point defined by the <code>popover</code>
+												(experimental) property.</p>
+										</li>
+									</ul><p></p>
+								<p>For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/analytical" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/analytical" class="sap-doc">Analytical Card</a>
+										section and the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/chartActions" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/chartActions" class="sap-doc">Chart Actions</a> and
+											<a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/detailsPopover" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/detailsPopover" class="sap-doc">Details Popover</a>
+										samples in the Card Explorer.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.ui.layout.ResponsiveSplitter</code></span></p>
+								<p>We have added a new <code>resize</code> event, fired when the
+									contents of the <code>sap.ui.layout.PaneContainer</code> are
+									resized. For more information, see the <a href="#/api/sap.ui.layout.PaneContainer" title="#/api/sap.ui.layout.PaneContainer" class="sap-doc" alt="#/api/sap.ui.layout.PaneContainer">API Reference</a> and
+										the <a href="#/entity/sap.ui.layout.ResponsiveSplitter/sample/sap.ui.layout.sample.ResponsiveSplitter" title="#/entity/sap.ui.layout.ResponsiveSplitter/sample/sap.ui.layout.sample.ResponsiveSplitter" class="sap-doc" alt="#/entity/sap.ui.layout.ResponsiveSplitter/sample/sap.ui.layout.sample.ResponsiveSplitter">Sample</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_yxw_pxt_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Deprecations</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_krd_ltq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Deprecation of String-Based Rendering</span></p>
+								<p>String-based rendering (also known as "apiVersion 1" of a renderer) has been deprecated.
+										Please use the <a href="#/api/sap.ui.core.RenderManager" title="#/api/sap.ui.core.RenderManager" class="sap-doc" alt="#/api/sap.ui.core.RenderManager">Semantic Rendering API
+											("apiVersion 2")</a> instead. For a complete list of all deprecations, see <a href="#/api/deprecated" title="#/api/deprecated" class="sap-doc" alt="#/api/deprecated">Deprecated
+										APIs</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink"><br><strong>Parent topic: </strong><a href="topic/6660a59a8a22460a91fe65a0d96a567e">Previous Versions</a></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="relatedLinks"><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"><li><a href="topic/5a184109b1ec44e7ab7e43d40ef56847">What's New in OpenUI5 1.101</a></li><li><a href="topic/5deb78f36022473487be44cb3a71140a">What's New in OpenUI5 1.100</a></li><li><a href="topic/5e35c2512e014e3b9831afd1cd041ed4">What's New in OpenUI5 1.99</a></li><li><a href="topic/7aacb4e107c44c90b5b0dd97fcb1f333">What's New in OpenUI5 1.98</a></li><li><a href="topic/f21858fa6a07451c9cb86e0c023a7092">What's New in OpenUI5 1.97</a></li><li><a href="topic/b39a11b47d994e9cb81c7e80946ed976">What's New in OpenUI5 1.96</a></li><li><a href="topic/1b094659cfcf422c968ce17d39f89211">What's New in OpenUI5 1.95</a></li><li><a href="topic/2d6ffddd26dd41ba91a5cf1b38f6b0f6">What's New in OpenUI5 1.94</a></li><li><a href="topic/e9c83569a4a54f04a349c4152358f4ff">What's New in OpenUI5 1.93</a></li><li><a href="topic/75777daa78734f2db4e4c8a8124c0644">What's New in OpenUI5 1.91</a></li><li><a href="topic/b47520229109430cba291b5290848c08">What's New in OpenUI5 1.90</a></li><li><a href="topic/08050365ef9f4777af7b3c139fdb0d82">What's New in OpenUI5 1.89</a></li><li><a href="topic/bda141b86c464e5bad7c0a0cc9dee753">What's New in OpenUI5 1.88</a></li><li><a href="topic/e315108a469f4a729030299a3bc84b77">What's New in OpenUI5 1.87</a></li><li><a href="topic/067e2fb0165145a5ac9b128b5853f7c9">What's New in OpenUI5 1.86</a></li><li><a href="topic/eeb5bd913fe448598e0449050143027a">What's New in OpenUI5 1.85</a></li><li><a href="topic/ccf76b76327c421e9d87ff7fc3d7ba41">What's New in OpenUI5 1.84</a></li><li><a href="topic/f081cf0a64784c62aa653e80036659f0">What's New in OpenUI5 1.82</a></li><li><a href="topic/f71563ccd2294cf0a59d16b62be0f7eb">What's New in OpenUI5 1.81</a></li><li><a href="topic/3294c688331c4e918a22dc0bb0892ff8">What's New in OpenUI5 1.80</a></li><li><a href="topic/edf8e35377d4452491cdc488030feb13">What's New in OpenUI5 1.79</a></li><li><a href="topic/d176be37229a45dbb1d6d0a1ae2f3167">What's New in OpenUI5 1.78</a></li><li><a href="topic/2ec6b6b03ee249928bba929eec3d2d74">What's New in OpenUI5 1.77</a></li><li><a href="topic/b9b0a3f223c14b9d99e0d86e649cafec">What's New in OpenUI5 1.76</a></li><li><a href="topic/dc3d3ce46105441db5543049fb1c11e7">What's New in OpenUI5 1.75</a></li><li><a href="topic/21fc6cb77b0c44aab55f045812e69c98">What's New in OpenUI5 1.74</a></li><li><a href="topic/7b826642c45d4b8d97c5013cdc240ad6">What's New in OpenUI5 1.73</a></li><li><a href="topic/25e532617b7f4b9bad842757324151ed">What's New in OpenUI5 1.72</a></li><li><a href="topic/609fd015eaf64bd2a4a5c0331590eb4c">What's New in OpenUI5 1.71</a></li><li><a href="topic/4e89fee547a24385826cddcfdf4df238">What's New in OpenUI5 1.70</a></li><li><a href="topic/41203fd3272b479d8c665357e3b21a43">What's New in OpenUI5 1.69</a></li><li><a href="topic/5531aef1adc8462392a5b8fe1178606e">What's New in OpenUI5 1.68</a></li><li><a href="topic/0968958c4143469d941dbe3b59e06142">What's New in OpenUI5 1.67</a></li><li><a href="topic/ebe7fda555aa466782090053d6f54f21">What's New in OpenUI5 1.66</a></li><li><a href="topic/9d2b1897722a4e99b60580fb09aa35e0">What's New in OpenUI5 1.65</a></li><li><a href="topic/1975e304ab924fb3b799240fdd9fe59b">What's New in OpenUI5 1.64</a></li><li><a href="topic/77e1dcc27c494d60ba0a03759b706e89">What's New in OpenUI5 1.63</a></li><li><a href="topic/27eea38eeb7b40d19d0dfe3ddf513175">What's New in OpenUI5 1.62</a></li><li><a href="topic/de4d50b6c0f649fa859e4657ff8557a6">What's New in OpenUI5 1.61</a></li><li><a href="topic/2a70354a2a38492a873333edc4b9a303">What's New in OpenUI5 1.60</a></li><li><a href="topic/b28edde1f4ad425d9247f3bbcdc5d9b7">What's New in OpenUI5 1.58</a></li><li><a href="topic/53b4b5ec2c83408a8da2cb6b9154c246">What's New in OpenUI5 1.56</a></li><li><a href="topic/f29023ebf9dc4a43b98516a5e2c43837">What's New in OpenUI5 1.54</a></li><li><a href="topic/a09dd79a24c041d288402768558a1d1a">What's New in OpenUI5 1.52</a></li><li><a href="topic/a8449849c81249bb8abd98b4b9342a4a">What's New in OpenUI5 1.50</a></li><li><a href="topic/2818f800e7424c5c91dbd495f8cb757b">What's New in OpenUI5 1.48</a></li><li><a href="topic/4cf0986450ca43e5a8d12dd66e999a77">What's New in OpenUI5 1.46</a></li><li><a href="topic/05ce1dc72c74475bada39234f6721f21">What's New in OpenUI5 1.44</a></li><li><a href="topic/4768f1ac7f0645929b4e9ea9981bb65e">What's New in OpenUI5 1.42</a></li><li><a href="topic/e659bd2383524a05b716916bcda9b368">What's New in OpenUI5 1.40</a></li><li><a href="topic/6a875f998994489483e8085705347d72#loio6a875f998994489483e8085705347d72">What's New in OpenUI5 1.38</a></li></ul></section></div></section></div></body></html>

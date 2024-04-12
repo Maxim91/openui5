@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simple-type xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>Priority</name>
+    <derived/>
+    <documentation>Defines the priority for the TileContent in ActionMode</documentation>
+    <enumeration>
+        <value name="VeryHigh">
+            <documentation>It displays very high priority color for the GenericTag</documentation>
+        </value>
+        <value name="High">
+            <documentation>It displays high priority color for the GenericTag</documentation>
+        </value>
+        <value name="Medium">
+            <documentation>It displays medium priority color for the GenericTag</documentation>
+        </value>
+        <value name="Low">
+            <documentation>It displays low priority color for the GenericTag</documentation>
+        </value>
+        <value name="None">
+            <documentation>The priority is not set</documentation>
+        </value>
+    </enumeration>
+</simple-type>

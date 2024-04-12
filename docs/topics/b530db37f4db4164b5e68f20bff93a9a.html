@@ -1,0 +1,261 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loiob530db37f4db4164b5e68f20bff93a9a" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">What's New in OpenUI5
+		1.102</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">What's New in OpenUI5
+		1.102</h2></div><div class="shortdesc">With
+		this release OpenUI5 is upgraded
+		from version 1.101 to 1.102.</div><section id="section_jhg_nsb_ntb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Preview and Announcements</h2></div><div class="fig"><p>The following information concerns important upcoming changes. UI changes may have an impact on the user experience and may require
+				test cases to be adapted.</p><div class="tableWrapper "><div class="fig"><table border="1" id="table_khg_nsb_ntb" class=" "><colgroup><col width="1"><col width="1"><col width="1"></colgroup>
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Type</th>
+							<th colspan="1" rowspan="1">Description</th>
+							<th colspan="1" rowspan="1">Available as of OpenUI5 Version</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">Announcement</td>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Reminder: Outdated OpenUI5 Versions to Be
+										Removed from the CDN</span></p>
+								<p>For security reasons, OpenUI5 versions that are no
+									longer maintained will be removed from the UI5 content delivery network (CDN) one year after their end of
+									maintenance. If a version is still in maintenance, patches of that version that are older than one year will also
+									be removed. We have noted that a number of customers are still using such outdated versions or patches. If this
+									affects you, please note that once these versions or patches are removed, your applications will break. Please
+									update to a more recent version or patch. For more information, see: <a href="https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/" title="https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/" class="external-link" target="_blank" rel="noopener">Removing
+										Outdated UI5 Versions from UI5 CDN</a> as well as the UI5 notifications in the Demo Kit.</p>
+							</td>
+							<td colspan="1" rowspan="1">n/a</td>
+						</tr>
+						
+						
+					</tbody>
+				</table></div></div></div></section><section id="section_yxw_pxt_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">New
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_krd_ltq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><p><span class="emphasis">Accessibility Guide</span></p><p>The
+									accessibility guide is a newly developed application about web
+									accessibility in OpenUI5. As an addition to the
+									existing accessibility documentation in the Demo Kit, the
+									accessibility guide provides practical, code-oriented guidance
+									and samples.</p>For more information, see <a href="test-resources/sap/m/demokit/accessibilityGuide/webapp/index.html" title="https://ui5.sap.com/test-resources/sap/m/demokit/accessibilityGuide/webapp/index.html" class="sap-doc">Accessibility
+									Guide</a>.</td>
+						</tr>
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Visualization of IANA Time Zones for Date/Time
+										Data</span></p>
+								<p>OpenUI5 now supports the visualization of IANA time zones for
+									date/time data. The time zone can either be passed via
+									configuration or specified via an annotation from a back-end
+									service.</p>
+								<p>The following OpenUI5 functionality supports IANA time zones:</p><ul class="ul ">
+										<li class="li">
+											<p>Configuration of the default time zone via:</p><ul class="ul ">
+												<li class="li">
+												<p>The <code>timezone</code> configuration
+												option (see <a href="#/api/sap.ui.core.Configuration" title="#/api/sap.ui.core.Configuration" class="sap-doc" alt="#/api/sap.ui.core.Configuration"><code>sap.ui.core.Configuration</code></a>).</p>
+												</li>
+												<li class="li">The API method <a href="#/api/sap.ui.core.Configuration/methods/setTimezone" title="#/api/sap.ui.core.Configuration/methods/setTimezone" class="sap-doc" alt="#/api/sap.ui.core.Configuration/methods/setTimezone"><code>sap.ui.core.Configuration.setTimezone</code></a></li>
+												</ul><p></p>
+										</li>
+										<li class="li">The time zone-specific <code>DateFormat</code>
+											<a href="#/api/sap.ui.core.format.DateFormat.DateTimeWithTimezone" title="#/api/sap.ui.core.format.DateFormat.DateTimeWithTimezone" class="sap-doc" alt="#/api/sap.ui.core.format.DateFormat.DateTimeWithTimezone"><code>DateTimeWithTimezone</code></a>,
+											which can be retrieved via <a href="#/api/api/sap.ui.core.format.DateFormat%23methods/sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance" title="#/api/api/sap.ui.core.format.DateFormat%23methods/sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance" class="sap-doc" alt="#/api/api/sap.ui.core.format.DateFormat%23methods/sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance"><code>sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance</code></a>.
+											It allows the formatting/parsing of timestamps while
+											visualizing the date and/or the time and/or the time
+											zone. For more information, see <a href="#/api/sap.ui.core.format.DateFormat" title="#/api/sap.ui.core.format.DateFormat" class="sap-doc" alt="#/api/sap.ui.core.format.DateFormat"><code>sap.ui.core.format.DateFormat</code></a>
+											as well as <a href="#/topic/91f2eba36f4d1014b6dd926db0e91070.html" title="The sap.ui.core.format.DateFormat class can be used to parse a string representing a date, time, or the combination of date and time into a JavaScript date object and vice versa (also known as format)." class="sap-doc">Date Format</a>.</li>
+										<li class="li">The new <a href="#/api/sap.ui.model.odata.type.DateTimeWithTimezone" title="#/api/sap.ui.model.odata.type.DateTimeWithTimezone" class="sap-doc" alt="#/api/sap.ui.model.odata.type.DateTimeWithTimezone"><code>sap.ui.model.odata.type.DateTimeWithTimezone</code></a>
+											composite type where the first part is the time stamp
+											and the second part is the IANA time zone.</li>
+										<li class="li">The OData V4 model supports specifying the time zone via
+											the
+												<code>com.sap.vocabularies.common.v1.Timezone</code>
+											annotation. For more information, see:<ul class="ul ">
+												<li class="li">
+												<p><a href="#/topic/7f29fb3ce5964d8090038a9d3cdf5060.html" title="Each OData V4 model offers access via getMetaModel to a corresponding metadata model sap.ui.model.odata.v4.ODataMetaModel, which is read-only and offers access to OData V4 metadata in a streamlined JSON format (see links under Related Information for more details). Only one-time bindings are supported by this model because the metadata is immutable." class="sap-doc">Meta Model for OData V4</a></p>
+												</li>
+												<li class="li"><a href="#/topic/7f29fb3ce5964d8090038a9d3cdf5060.html#loio7f29fb3ce5964d8090038a9d3cdf5060/section_AnnoHelp" title="7f29fb3ce5964d8090038a9d3cdf5060.xml#loio7f29fb3ce5964d8090038a9d3cdf5060/section_AnnoHelp" class="sap-doc">AnnotationHelper</a></li>
+											</ul>In OData V2, this is handled by the enhancements
+											mentioned for
+												<code>sap.ui.comp.smartfield.SmartField</code>
+											and <code>sap.ui.comp.smarttable.SmartTable</code>
+											below.</li>
+										<li class="li"><a href="#/api/sap.m.DateTimePicker" title="#/api/sap.m.DateTimePicker" class="sap-doc" alt="#/api/sap.m.DateTimePicker"><code>sap.m.DateTimePicker</code></a>
+											visualizes the time zone based on the type information.
+											In addition, it has its own properties for visualizing
+											the time zone.</li>
+										
+										
+										
+										
+									</ul><p></p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_qwl_pb5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_tpj_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><span class="emphasis">Accessibility</span><p>We are now using JAWS 2022
+									as a reference testing environment in OpenUI5. For more information,
+									see the <cite>Assistive technologies reference testing
+										environment for SAPUI5</cite> SAP Note
+										<a title="https://launchpad.support.sap.com/#/notes/" href="https://launchpad.support.sap.com/#/notes/2564165" target="_blank" rel="noopener noreferrer">2564165</a>.</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Improved Handling of Aggregations in XML
+										Views</span></p>
+								<p>Aggregations of the XML view itself and of the controls inside
+									the view are now handled in the same way.</p>
+								<p>If a container control has one of its aggregations marked as the
+									default aggregation, you can now add children directly into that
+									control. For example, if
+										<code>sap.ui.core.mvc.XMLView</code>'s
+										<code>content</code> aggregation is marked as default,
+									you can define content for the aggregation directly in the XML
+									view, without explicitly adding a <code>content</code> tag.
+									Of course, when a container control does not have a default
+									aggregation defined, or when adding a child control into another
+									aggregation, you still need to use an aggregation tag, for
+									example <code>dependents</code>.</p>
+								<p>In order to align the usage of XML views and controls even
+									further, aggregations such as <code>content</code> and
+										<code>dependents</code> are now also bindable. This is
+									only supported when following the best practice not to use
+									native HTML inside XML views. For more information, see <a href="#/topic/19eabf5b13214f27b929b9473df3195b.html" title="In XML views, aggregated child controls can be added as child tags." class="sap-doc">Aggregation Handling in XML Views</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V2 Model</span></p>
+								<p>The <code>sap.ui.model.odata.OperationMode.Auto</code>
+									operation mode is deprecated. If the amount of data is small
+									enough to be loaded completely onto the client, use
+										<code>sap.ui.model.odata.OperationMode.Client</code>
+									instead. Otherwise, use
+										<code>sap.ui.model.odata.OperationMode.Server</code> or
+										<code>sap.ui.model.odata.OperationMode.Default</code>. For more information, see the <a href="#/api/sap.ui.model.odata.OperationMode%23overview" title="#/api/sap.ui.model.odata.OperationMode%23overview" class="sap-doc" alt="#/api/sap.ui.model.odata.OperationMode%23overview">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V4 Model</span></p>
+								<p>The new version of the OpenUI5 OData V4 model introduces the following features:</p>
+								<ul class="ul ">
+									<li class="li">The creation of inactive rows introduced with OpenUI5 1.97 is no longer experimental. For more information, see
+											<a href="#/topic/c9723f8265f644af91c0ed941e114d46.html" title="The sap.ui.model.odata.v4.ODataListBinding#create method creates a new entity. Users can interact with a newly created entity even before it has been sent to the server." class="sap-doc">Creating an Entity</a> and the <a href="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create" title="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create">API
+											Reference</a>.</li>
+									<li class="li">If metadata is already available, key predicates of message
+										targets received from the back end are now normalized to
+										match the key predicates calculated on the client.</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_rqn_wd5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_qcq_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.DatePicker</code>,
+											<code>sap.m.TimePicker</code>, and
+											<code>sap.m.DateTimePicker</code></span></p>
+								<p>We have added <code>afterValueHelpOpen</code> and
+										<code>afterValueHelpClose</code> events, fired when
+									value help dialog opens and closes.</p>
+								For more information, see the <a href="#/api/sap.m.DatePicker" title="#/api/sap.m.DatePicker" class="sap-doc" alt="#/api/sap.m.DatePicker">API Reference</a>.
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.NotificationListItem</code> and
+											<code>sap.m.NotificationListGroup</code></span></p>
+								<p>We have applied the following visual changes, which improve the
+									prioritization of the displayed information on small screen
+										sizes:</p><ul class="ul ">
+										<li class="li">
+											<p>The title of the
+												<code>sap.m.NotificationListGroup</code>
+												doesn’t truncate any more. Instead, it wraps to as
+												many lines it needs.</p>
+										</li>
+										<li class="li">
+											<p>The avatar of the
+												<code>sap.m.NotificationListItem</code> is
+												hidden in small (S) control size.</p>
+										</li>
+										<li class="li">
+											<p>The action button and the close button (if present)
+												are moved to a single overflow in small (S) control
+												size.</p>
+										</li>
+									</ul><p></p>
+								<p>For more information, see the <a href="#/entity/sap.m.NotificationListItem/sample/sap.m.sample.NotificationListItem" title="#/entity/sap.m.NotificationListItem/sample/sap.m.sample.NotificationListItem" class="sap-doc" alt="#/entity/sap.m.NotificationListItem/sample/sap.m.sample.NotificationListItem">NotificationListItem</a> and the <a href="#/entity/sap.m.NotificationListGroup/sample/sap.m.sample.NotificationListGroup" title="#/entity/sap.m.NotificationListGroup/sample/sap.m.sample.NotificationListGroup" class="sap-doc" alt="#/entity/sap.m.NotificationListGroup/sample/sap.m.sample.NotificationListGroup">NotificationListGroup</a> samples.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.p13n*</code></span></p>
+								<p>We have improved the usability of the <span class="ph uicontrol">View
+										Settings</span> dialog. To do this, we have replaced
+									the <code>sap.m.Select</code> control with a
+										<code>sap.m.ComboBox</code> control and items of type
+										<code>sap.m.StandardListItem</code>. </p>
+								<p>In particular, the following changes have been applied: </p><ul class="ul ">
+										<li class="li">
+											<p>We have replaced <span class="ph uicontrol">None</span> in the
+												selection lists of the <span class="ph uicontrol">Sort</span>
+												and <span class="ph uicontrol">Group</span> tabs
+												with
+												the <span class="ph uicontrol">Sort by</span> and
+												<span class="ph uicontrol">Group by</span> placeholder texts
+												based on the SAP Fiori
+												design guidelines.</p>
+										</li>
+										<li class="li"><p>We have adapted the tooltips of the
+												<span class="ph uicontrol">Delete</span> buttons for removing
+												entries on the tabs.</p><img src="Sort_tab_for_WN_View_Settings_53d93b3.png" usemap="#"></li>
+										<li class="li">
+											<p>For a more simplified search, especially in a long
+												selection list, users can now enter a column
+												name.</p>
+										</li>
+									</ul>For more information, see the <a href="#/entity/sap.m.p13n.Popup/sample/sap.m.sample.p13n.Popup" title="#/entity/sap.m.p13n.Popup/sample/sap.m.sample.p13n.Popup" class="sap-doc" alt="#/entity/sap.m.p13n.Popup/sample/sap.m.sample.p13n.Popup">Sample</a> for
+											<code>sap.m.p13n.Popup</code> and the <a href="#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustom" title="#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustom" class="sap-doc" alt="#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustom">Sample</a> for
+											<code>SmartTable</code>.<p></p>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td colspan="1" rowspan="1"><p><span class="emphasis"><code>sap.ui.unified.FileUploader</code></span></p>
+								<p>We have implemented <code>beforeDialogOpen</code> and
+										<code>beforeDialogClose</code> events, fired when the
+									user opens and closes the file select dialog.</p>
+								For more information, see the <a href="#/api/sap.ui.unified.FileUploader" title="#/api/sap.ui.unified.FileUploader" class="sap-doc" alt="#/api/sap.ui.unified.FileUploader">API Reference</a>.
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_cps_cg5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Deprecations</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_p1z_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>There are currently no major deprecations. For a complete list of all deprecations, see <a href="#/api/deprecated" title="#/api/deprecated" class="sap-doc" alt="#/api/deprecated">Deprecated
+										APIs</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink hidden"><br><strong>Parent topic: </strong></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="hidden relatedLinks "><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"></ul></section></div></section></div></body></html>

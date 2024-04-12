@@ -1,0 +1,130 @@
+<mvc:View
+	class="sapUiSizeCompact"
+	controllerName="sap.ui.core.sample.odata.v4.MultipleInlineCreationRowsGrid.Main"
+	height="100%"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:t="sap.ui.table">
+<App>
+	<Page id="page" showHeader="false">
+		<Toolbar>
+			<Button enabled="true" icon="sap-icon://refresh" id="refresh"
+				press="onRefresh" tooltip="Refresh"/>
+			<Button id="save" text="Save" press="onSave" visible="{ui>/bAPI}"
+				tooltip="Save changes"/>
+			<Button id="cancel" text="Cancel" press="onCancel" visible="{ui>/bAPI}"
+				tooltip="Reset changes"/>
+			<BusyIndicator text="{ui>/sActivity}" visible="{= !!${ui>/sActivity} }"/>
+			<ToolbarSpacer/>
+			<Button id="showMessages" icon="sap-icon://message-popup" tooltip="Show messages"
+					press="onToggleMessagePopover" text="{ui>/iMessages}"
+					type="{= ${ui>/iMessages} ? 'Emphasized' : 'Default' }"/>
+		</Toolbar>
+		<content>
+			<f:FlexibleColumnLayout id="layout" layout="{ui>/sLayout}">
+				<f:beginColumnPages>
+				<Table id="products" growing="true" growingThreshold="20" items="{
+						path : '/Products',
+						parameters : {
+							$filter :
+								'IsActiveEntity eq false or SiblingEntity/IsActiveEntity eq null',
+							$$patchWithoutSideEffects : true,
+							$select : ['HasDraftEntity']
+						}
+					}" mode="SingleSelectMaster"
+					selectionChange="onSelectProduct">
+					<headerToolbar>
+						<Toolbar>
+							<Title text="Products" titleStyle="H3"/>
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column width="3em">
+							<Text text="ID"/>
+						</Column>
+						<Column width="3em">
+							<Text text="Draft"/>
+						</Column>
+						<Column width="12em">
+							<Text text="Name"/>
+						</Column>
+					</columns>
+					<ColumnListItem id="highlight">
+						<Text id="productId" text="{ID}"/>
+						<CheckBox editable="false" selected="{= !%{IsActiveEntity} }"/>
+						<Text id="name" text="{name}"/>
+					</ColumnListItem>
+				</Table>
+				</f:beginColumnPages>
+				<f:midColumnPages>
+					<t:Table ariaLabelledBy="Product Parts"
+							id="parts" rows="{
+								path : '_Parts',
+								parameters : {$count : true, $$ownRequest : true},
+								templateShareable : true
+							}"
+							selectionMode="None"
+							visibleRowCount="20">
+						<t:extension>
+							<Toolbar design="Transparent" class="sapMTBHeader-CTX">
+								<Title id="partsTitle"
+									text="Product: {ID}, {headerContext>$count} Parts"/>
+							</Toolbar>
+						</t:extension>
+						<t:columns>
+							<t:Column width="4em" hAlign="Center">
+								<Label text="State" />
+								<t:template>
+									<core:Icon
+										id="partState"
+										src="{= %{@$ui5.context.isInactive}
+											? 'sap-icon://sys-minus'
+											: (%{@$ui5.context.isTransient}
+												? 'sap-icon://sys-add'
+												: 'sap-icon://sys-enter')}"
+										tooltip="{= %{@$ui5.context.isInactive}
+											? 'inactive'
+											: (%{@$ui5.context.isTransient}
+												? 'transient'
+												: 'persisted')}"
+										/>
+								</t:template>
+							</t:Column>
+							<t:Column width="4em">
+								<Label text="ID" />
+								<t:template>
+									<Input id="partId" value="{ID}" />
+								</t:template>
+							</t:Column>
+							<t:Column width="8em">
+								<Label text="Description" />
+								<t:template>
+									<Input id="description" value="{description}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="8em">
+								<Button iconFirst="false" icon="{ui>/sSortPartsQuantityIcon}"
+									id="sortByPartsQuantity" press="onSortByPartsQuantity"
+									text="Quantity"/>
+								<t:template>
+									<Input textAlign="Right" value="{quantity}" />
+								</t:template>
+							</t:Column>
+							<t:Column width="3em">
+								<t:template>
+									<Button id="partDelete"
+										enabled="{= !%{@$ui5.context.isInactive} }"
+										icon="sap-icon://delete" press="onDelete"
+										tooltip="Delete part"/>
+								</t:template>
+							</t:Column>
+						</t:columns>
+					</t:Table>
+				</f:midColumnPages>
+			</f:FlexibleColumnLayout>
+		</content>
+	</Page>
+</App>
+</mvc:View>

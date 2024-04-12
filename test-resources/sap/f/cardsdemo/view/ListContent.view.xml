@@ -1,0 +1,82 @@
+<mvc:View
+	controllerName="sap.f.cardsdemo.controller.ListContent"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:w="sap.ui.integration.widgets"
+	displayBlock="true">
+	<Page title="{i18n>appTitle}">
+		<headerContent>
+			<CheckBox
+				text="Loading"
+				select=".onLoadingSelect"
+				tooltip="List placehoder doesn't react on dynamic switch of compact and cozy densities"
+			>
+			</CheckBox>
+		</headerContent>
+		<subHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="List Card" />
+				<ToolbarSpacer/>
+			</Toolbar>
+		</subHeader>
+
+		<SegmentedButton
+			selectedKey="cozy"
+			selectionChange=".onFormFactorChange"
+			class="VizTestDensityBtn sapUiSmallMargin">
+			<items>
+				<SegmentedButtonItem text="Cozy" key="cozy" />
+				<SegmentedButtonItem text="Compact" key="compact" />
+			</items>
+		</SegmentedButton>
+
+		<f:GridContainer
+			id="gridCont"
+			class="sapUiSmallMargin"
+			inlineBlockLayout="true"
+		>
+			<w:Card id="card1" baseUrl="{cardsPlayground>/playgroundBaseUrl}" manifest="{listContentManifests>/tasksContent}">
+				<w:layoutData>
+					<f:GridContainerItemLayoutData columns="3" />
+				</w:layoutData>
+			</w:Card>
+			<w:Card id="card2" baseUrl="{cardsPlayground>/playgroundBaseUrl}" manifest="{listContentManifests>/listWithAvatars}">
+				<w:layoutData>
+					<f:GridContainerItemLayoutData columns="3" />
+				</w:layoutData>
+			</w:Card>
+			<w:Card id="card3" baseUrl="{cardsPlayground>/playgroundBaseUrl}" manifest="{listContentManifests>/listCardWithProducts}">
+				<w:layoutData>
+					<f:GridContainerItemLayoutData columns="3" />
+				</w:layoutData>
+			</w:Card>
+			<w:Card manifest="{cardsPlayground>/playgroundBaseUrl}/bundles/listQuickActions/manifest.json" action=".onAction">
+			<w:layoutData>
+				<f:GridContainerItemLayoutData columns="4" />
+			</w:layoutData>
+			</w:Card>
+			<w:Card id="card4" manifest="{cardsPlayground>/playgroundBaseUrl}/cardcontent/listContent/quickActions.json" action=".onAction">
+				<w:layoutData>
+					<f:GridContainerItemLayoutData columns="4" />
+				</w:layoutData>
+			</w:Card>
+			<w:Card id="card5" baseUrl="{cardsPlayground>/playgroundBaseUrl}" manifest="{listContentManifests>/listAttributes}">
+				<w:layoutData>
+					<f:GridContainerItemLayoutData columns="4" />
+				</w:layoutData>
+			</w:Card>
+			<w:Card baseUrl="{cardsPlayground>/playgroundBaseUrl}" manifest="{listContentManifests>/listAttributesIconChart}">
+				<w:layoutData>
+					<f:GridContainerItemLayoutData columns="4" />
+				</w:layoutData>
+			</w:Card>
+			<w:Card id="card6" baseUrl="{cardsPlayground>/playgroundBaseUrl}" manifest="{listContentManifests>/listAttributesActions}">
+				<w:layoutData>
+					<f:GridContainerItemLayoutData columns="4" />
+				</w:layoutData>
+			</w:Card>
+		</f:GridContainer>
+	</Page>
+</mvc:View>

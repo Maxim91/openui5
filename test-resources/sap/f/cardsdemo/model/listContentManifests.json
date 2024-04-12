@@ -1,0 +1,613 @@
+{
+	"tasksContent": {
+		"sap.app": {
+			"id": "tasksContent",
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "List",
+			"header": {
+				"title": "Department Budget State",
+				"subTitle": "2019",
+				"icon": {
+					"src": "sap-icon://collections-insight"
+				}
+			},
+			"content": {
+				"data": {
+					"request": {
+						"url": "./cardcontent/listContent/tasks.json"
+					},
+					"path": "/"
+				},
+				"item": {
+					"icon": {
+						"src": "{icon}"
+					},
+					"title": {
+						"value": "{Name}"
+					},
+					"info": {
+						"value": "{= ${departmentBudget}  > ${departmentBudgetThreshold} ? 'Exceeded' : 'In Range' }",
+						"state": "{= ${departmentBudget}  > ${departmentBudgetThreshold} ? 'Error' : 'Success' }"
+					}
+				},
+				"maxItems": 3
+			}
+		}
+	},
+	"listCardWithProducts" : {
+		"sap.app": {
+			"type": "card",
+			"id": "listCardWithProducts"
+		},
+		"sap.card": {
+			"type": "List",
+			"data": {
+				"json": {
+					"products": [{
+						"Id": "HT-1000",
+						"Name": "Notebook Basic 15",
+						"Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
+						"CurrencyCode": "USD",
+						"Price": "956.00"
+					},
+						{
+							"Id": "HT-1001",
+							"Name": "Notebook Basic 17",
+							"Description": "Notebook Basic 17 with 2,80 GHz quad core, 17\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
+							"CurrencyCode": "USD",
+							"Price": "1249.00"
+						},
+						{
+							"Id": "HT-1002",
+							"Name": "Notebook Basic 18",
+							"Description": "Notebook Basic 18 with 2,80 GHz quad core, 18\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro",
+							"CurrencyCode": "USD",
+							"Price": "1570.00"
+						},
+						{
+							"Id": "HT-1003",
+							"Name": "Notebook Basic 19",
+							"Description": "Notebook Basic 19 with 2,80 GHz quad core, 19\" LCD, 8 GB DDR3 RAM, 1000 GB Hard Disc, Windows 8 Pro",
+							"CurrencyCode": "USD",
+							"Price": "1650.00"
+						},
+						{
+							"Id": "HT-1004",
+							"Name": "ITelO Vault",
+							"Description": "Digital Organizer with State-of-the-Art Storage Encryption",
+							"CurrencyCode": "USD",
+							"Price": "299.00"
+						},
+						{
+							"Id": "HT-1005",
+							"Name": "Notebook Professional 15",
+							"Description": "Notebook Professional 15 with 2,80 GHz quad core, 15\" Multitouch LCD, 8 GB DDR3 RAM, 500 GB SSD - DVD-Writer (DVD-R/+R/-RW/-RAM),Windows 8 Pro",
+							"CurrencyCode": "USD",
+							"Price": "1999.00"
+						},
+						{
+							"Id": "HT-1006",
+							"Name": "Notebook Professional 17",
+							"Description": "Notebook Professional 17 with 2,80 GHz quad core, 17\" Multitouch LCD, 8 GB DDR3 RAM, 500 GB SSD - DVD-Writer (DVD-R/+R/-RW/-RAM),Windows 8 Pro",
+							"CurrencyCode": "USD",
+							"Price": "2299.00"
+						}
+					],
+					"count": 7
+				}
+			},
+			"header": {
+				"title": "List Card with Products",
+				"subTitle": "Products and Prices"
+			},
+			"content": {
+				"data": {
+					"path": "/products"
+				},
+				"item": {
+					"title": "{Name}",
+					"description": "",
+					"info": {
+						"value":  "{Price}"
+					},
+					"actions": [{
+						"type": "Navigation",
+						"parameters": {
+							"url": ""
+						}
+					}]
+				},
+				"maxItems": 7
+			}
+		}
+	},
+	"listAttributesActions": {
+		"sap.app": {
+			"type": "card",
+			"id": "list.attributes.actions"
+		},
+		"sap.card": {
+			"type": "List",
+			"header": {
+				"title": "List Card",
+				"subTitle": "City"
+			},
+			"content": {
+				"data": {
+					"json": [
+						{
+							"name": "Teico Inc.",
+							"description": "Sun Valley, Idaho",
+							"info": "2456",
+							"infoState": "Error",
+							"attributes": [
+								{
+									"name": "Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": "Info 1",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Info 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								},
+								{
+									"name": "Info 3",
+									"state": "None"
+								}
+							]
+						},
+						{
+							"name": "Freshhh LTD.",
+							"info": "1264",
+							"infoState": "Warning",
+							"attributes": [
+								{
+									"name": "Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								}
+							]
+						},
+						{
+							"name": "Lean Pulp",
+							"description": "Raymond, Callifornia",
+							"info": "236",
+							"infoState": "None",
+							"attributesLayoutType": "OneColumn",
+							"attributes": [
+								{
+									"name": "Attribute 1 Attribute 1 Attribute 1 Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2 Attribute 2 Attribute 2 Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								}
+							]
+						}
+					]
+				},
+				"maxItems": 3,
+				"item": {
+					"title": {
+						"value": "{name}"
+					},
+					"description": {
+						"value": "{description}"
+					},
+					"info": {
+						"value": "{infoState}",
+						"state": "{infoState}"
+					},
+					"highlight": "{infoState}",
+					"attributesLayoutType": "{attributesLayoutType}",
+					"attributes": [
+						{
+							"value": "{attributes/0/name}",
+							"state": "{attributes/0/state}"
+						},
+						{
+							"value": "{attributes/1/name}",
+							"state": "{attributes/1/state}"
+						},
+						{
+							"value": "{attributes/2/name}",
+							"state": "{attributes/2/state}"
+						},
+						{
+							"value": "{attributes/3/name}",
+							"state": "{attributes/3/state}"
+						},
+						{
+							"value": "{attributes/4/name}",
+							"state": "{attributes/4/state}"
+						},
+						{
+							"value": "{attributes/5/name}",
+							"state": "{attributes/5/state}"
+						}
+					],
+					"actionsStrip": [
+						{
+							"type": "Link",
+							"text": "Link to Meal",
+							"icon": "sap-icon://action",
+							"actions": [
+								{
+									"type": "Navigation",
+									"parameters": {
+										"url": "http://sap.com"
+									}
+								}
+							]
+						},
+						{
+							"type": "ToolbarSpacer"
+						},
+						{
+							"text": "Add",
+							"actions": [
+								{
+									"type": "Custom",
+									"parameters": {
+										"item": "{}"
+									}
+								}
+							]
+						},
+						{
+							"text": "Delete",
+							"actions": [
+								{
+									"type": "Custom",
+									"parameters": {
+										"item": "{}"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		}
+	},
+	"listAttributesIconChart": {
+		"sap.app": {
+			"type": "card",
+			"id": "list.attributes.icon.chart"
+		},
+		"sap.card": {
+			"type": "List",
+			"header": {
+				"title": "List Card",
+				"subTitle": "City"
+			},
+			"content": {
+				"data": {
+					"json": [
+						{
+							"name": "Freshhh LTD.",
+							"info": "1264",
+							"infoState": "Warning",
+							"attributes": [
+								{
+									"name": "Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": ""
+								},
+								{
+									"name": "Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Info 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								},
+								{
+									"name": "Info 3",
+									"state": "None"
+								}
+							]
+						},
+						{
+							"name": "Lean Pulp",
+							"description": "Raymond, Callifornia",
+							"info": "236",
+							"infoState": "None",
+							"attributesLayoutType": "OneColumn",
+							"attributes": [
+								{
+									"name": "Attribute 1 Attribute 1 Attribute 1 Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2 Attribute 2 Attribute 2 Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								}
+							]
+						},
+						{
+							"name": "Lean Pulp",
+							"description": "Raymond, Callifornia",
+							"info": "236",
+							"infoState": "None",
+							"attributesLayoutType": "OneColumn",
+							"attributes": [
+								{
+									"name": "Attribute 1 Attribute 1 Attribute",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2 Attribute 2 Attribute",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								}
+							]
+						}
+					]
+				},
+				"maxItems": 3,
+				"item": {
+					"icon": {
+						"src": "sap-icon://address-book"
+					},
+					"title": {
+						"value": "{name}"
+					},
+					"description": {
+						"value": "{description}"
+					},
+					"info": {
+						"value": "{infoState}",
+						"state": "{infoState}"
+					},
+					"attributesLayoutType": "{attributesLayoutType}",
+					"attributes": [
+						{
+							"value": "{attributes/0/name}",
+							"state": "{attributes/0/state}"
+						},
+						{
+							"value": "{attributes/1/name}",
+							"state": "{attributes/1/state}"
+						},
+						{
+							"value": "{attributes/2/name}",
+							"state": "{attributes/2/state}"
+						},
+						{
+							"value": "{attributes/3/name}",
+							"state": "{attributes/3/state}"
+						},
+						{
+							"value": "{attributes/4/name}",
+							"state": "{attributes/4/state}"
+						},
+						{
+							"value": "{attributes/5/name}",
+							"state": "{attributes/5/state}"
+						}
+					],
+					"chart": {
+						"type": "Bullet",
+						"minValue": 0,
+						"maxValue": 100,
+						"target": 60,
+						"value": 80,
+						"scale": "€",
+						"displayValue": "EUR",
+						"color": "Good"
+					}
+				}
+			}
+		}
+	},
+	"listAttributes": {
+		"sap.app": {
+			"type": "card",
+			"id": "list.attributes"
+		},
+		"sap.card": {
+			"type": "List",
+			"header": {
+				"title": "List Card",
+				"subTitle": "City"
+			},
+			"content": {
+				"data": {
+					"json": [
+						{
+							"name": "Teico Inc.",
+							"description": "Sun Valley, Idaho",
+							"info": "2456",
+							"infoState": "Error",
+							"attributesLayoutType": "TwoColumns",
+							"attributes": [
+								{
+									"name": "Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": "Info 1",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Info 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								},
+								{
+									"name": "Info 3",
+									"state": "None"
+								}
+							]
+						},
+						{
+							"name": "Freshhh LTD.",
+							"info": "1264",
+							"infoState": "Warning",
+							"attributes": [
+								{
+									"name": "Attribute 1 Attribute 1 Attribute 1 Attribute 1 Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": "Info 1 Info 1 Info 1 Info 1 Info 1 Info 1 Info 1 Info 1 Info 1 Info 1 Info 1 Info 1",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2 Attribute 2 Attribute 2 Attribute 2 Attribute 2 Attribute 2 Attribute 2 Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Info 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								},
+								{
+									"name": "Info 3 Info 3 Info 3 Info 3 Info 3 Info 3 Info 3 Info 3 Info 3 Info 3 Info 3 Info 3",
+									"state": "None"
+								}
+							]
+						},
+						{
+							"name": "Lean Pulp",
+							"description": "Raymond, Callifornia",
+							"info": "236",
+							"infoState": "None",
+							"attributesLayoutType": "OneColumn",
+							"attributes": [
+								{
+									"name": "Attribute 1 Attribute 1 Attribute 1 Attribute 1",
+									"state": "Error"
+								},
+								{
+									"name": "Attribute 2 Attribute 2 Attribute 2 Attribute 2",
+									"state": "Success"
+								},
+								{
+									"name": "Attribute 3",
+									"state": "None"
+								}
+							]
+						}
+					]
+				},
+				"maxItems": 3,
+				"item": {
+					"title": {
+						"value": "{name}"
+					},
+					"description": {
+						"value": "{description}"
+					},
+					"info": {
+						"value": "{infoState}",
+						"state": "{infoState}"
+					},
+					"attributesLayoutType": "{attributesLayoutType}",
+					"attributes": [
+						{
+							"value": "{attributes/0/name}",
+							"state": "{attributes/0/state}"
+						},
+						{
+							"value": "{attributes/1/name}",
+							"state": "{attributes/1/state}"
+						},
+						{
+							"value": "{attributes/2/name}",
+							"state": "{attributes/2/state}"
+						},
+						{
+							"value": "{attributes/3/name}",
+							"state": "{attributes/3/state}"
+						},
+						{
+							"value": "{attributes/4/name}",
+							"state": "{attributes/4/state}"
+						},
+						{
+							"value": "{attributes/5/name}",
+							"state": "{attributes/5/state}"
+						}
+					]
+				}
+			}
+		}
+	},
+	"listWithAvatars": {
+		"sap.app": {
+			"id": "cardsdemo.listContent.listWithAvatars",
+			"type": "card"
+		},
+		"sap.card": {
+			"data": {
+				"request": {
+					"url": "./cardcontent/someitems.json"
+				}
+			},
+			"type": "List",
+			"header": {
+				"title": "List with Avatars"
+			},
+			"content": {
+				"item": {
+					"icon": {
+						"src": "{icon}",
+						"shape": "Circle"
+					},
+					"title": "{Name}"
+				},
+				"maxItems": 4
+			}
+		}
+	}
+}

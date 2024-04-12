@@ -1,0 +1,100 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 95,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "Cell.less",
+			"size": 863,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "Grouping.less",
+			"size": 837,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "RowAction.less",
+			"size": 952,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "RowSelection.less",
+			"size": 875,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "Scrolling.less",
+			"size": 471,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "Table.less",
+			"size": 608,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 13148,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 131264,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 130886,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 64435,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 5285,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "library.css",
+			"size": 64456,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "library.less",
+			"size": 5734,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "library.source.less",
+			"size": 751,
+			"designtime": true,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 69169,
+			"theme": "sap_horizon_dark"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 69192,
+			"theme": "sap_horizon_dark"
+		}
+	]
+}

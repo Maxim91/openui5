@@ -1,0 +1,255 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loioe315108a469f4a729030299a3bc84b77" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">What's New in OpenUI5
+		1.87</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">What's New in OpenUI5
+		1.87</h2></div><div class="shortdesc">With
+		this release OpenUI5 is upgraded
+		from version 1.86 to 1.87.</div><section id="section_yxw_pxt_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">New
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_krd_ltq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><p><span class="emphasis">End of Support for Microsoft Internet Explorer 11
+										after OpenUI5 1.87</span></p>OpenUI5
+								1.87 is the last version to support Microsoft Internet Explorer 11.
+								For more information, see <a href="#/topic/74b59efa0eef48988d3b716bd0ecc933.html#loio74b59efa0eef48988d3b716bd0ecc933/MS_IE" title="74b59efa0eef48988d3b716bd0ecc933.xml#loio74b59efa0eef48988d3b716bd0ecc933/MS_IE" class="sap-doc">OpenUI5 Support Status for Microsoft Internet Explorer 11</a>.</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_bkm_s15_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">New
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_ejf_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.ExpandableText</code></span></p>
+								<p>You can use the control to display long texts, for example,
+									inside a table, list, or form. Only the first characters from
+									the text field and a <code>More</code> link are shown
+									initially, which allows the full text to be displayed. There are
+									two options for displaying the full text, which are defined by
+									the <code>overflowMode</code> property - in place (default)
+									or as a popover. The <code>maxCharacters</code> property
+									specifies the maximum number of characters from the beginning of
+									the text field, that are shown initially. For more information, see the <a href="#/api/sap.m.ExpandableText" title="#/api/sap.m.ExpandableText" class="sap-doc" alt="#/api/sap.m.ExpandableText">API Reference</a> and
+										the <a href="#/entity/sap.m.ExpandableText" title="#/entity/sap.m.ExpandableText" class="sap-doc" alt="#/entity/sap.m.ExpandableText">Samples</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_qwl_pb5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_tpj_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V4 Model</span></p>
+								<p>The new version of the OpenUI5 OData V4 model introduces the following features:</p>
+								<ul class="ul ">
+									<li class="li">
+										<p>A new <code>additionally</code> property within the
+												<code>group</code> map of the
+												<code>$$aggregation</code> list binding
+											parameter. This allows you to define properties that are
+											fetched together with a group level, such as a text for
+											a key. For more information, see <a href="#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation" title="#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation"><code>sap.ui.model.odata.v4.ODataListBinding#setAggregation</code></a>
+												and <a href="#/topic/7d914317c0b64c23824bf932cc8a4ae1.html" title="The OData V4 Model supports features of the OData Extension for Data Aggregation V4.0 specification." class="sap-doc">Extension for Data Aggregation</a>.</p>
+									</li>
+									<li class="li">
+										<p>Support of the
+												<code>sap.ui.model.odata.v4.Context#requestSideEffects</code>
+											method in combination with kept-alive contexts. A list
+											binding context can be kept alive with the
+												<code>sap.ui.model.odata.v4.Context#setKeepAlive</code>
+											method introduced with OpenUI5 1.81.</p>
+									</li>
+									<li class="li">
+										<p>Evaluation of the
+												<code>Org.OData.Core.V1.ContentID</code>
+											instance annotation in messages of error responses to
+											change sets, so that the message can be assigned to the
+											correct request and the message target can be calculated
+											correctly. For more information, see <a href="#/topic/fbe1cb5613cf4a40a841750bf813238e.html" title="The OData V4 model supports server messages sent via an OData V4 service." class="sap-doc">Server Messages in the OData V4 Model</a>.</p>
+									</li>
+								</ul>
+								
+								<p>For more information, see <a href="#/topic/5de13cf4dd1f4a3480f7e2eaaee3f5b8.html" title="The sap.ui.model.odata.v4.ODataModel is the model implementation for consuming an OData V4 service." class="sap-doc">OData V4 Model</a>, the <a href="#/api/sap.ui.model.odata.v4" title="#/api/sap.ui.model.odata.v4" class="sap-doc" alt="#/api/sap.ui.model.odata.v4">API Reference</a>, and
+									the <a href="#/entity/sap.ui.model.odata.v4.ODataModel" title="#/entity/sap.ui.model.odata.v4.ODataModel" class="sap-doc" alt="#/entity/sap.ui.model.odata.v4.ODataModel">Samples</a> in the Demo
+									Kit.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_rqn_wd5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_qcq_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.f.Card</code></span></p>
+								<p>We no longer apply default <code>min-height</code> in the
+									control, which allows smaller cards to be rendered properly. For more information, see the <a href="#/api/sap.f.Card" title="#/api/sap.f.Card" class="sap-doc" alt="#/api/sap.f.Card">API Reference</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.f.GridList</code></span></p>
+								<p>We have improved the keyboard handling capabilities of the
+									control. Now, similar to <code>sap.f.GridContainer</code>,
+									the navigation with <span class="keyWrap"><kbd class="key">Arrow</kbd></span> keys follows the cells of
+									the underlying (virtual) grid. This behavior provides stable
+									navigation paths if there are items of different sizes. When any
+									of the borders are reached, the <code>borderReached</code>
+									event is fired. To navigate to another
+									<code>GridList</code>, you have two options:</p><ul class="ul ">
+										<li class="li">
+											<p>Navigate using the <span class="keyWrap"><kbd class="key">Tab</kbd></span> key.</p>
+										</li>
+										<li class="li">
+											<p>Configure navigation with the <span class="keyWrap"><kbd class="key">Arrow</kbd></span> keys.
+												This is achieved by using the
+												<code>focusItemByDirection</code> method and
+												requires additional logic from the application side
+												to determine the navigation direction in the actual
+												app layout.</p>
+										</li>
+									</ul>For more information, see the <a href="#/api/sap.f.GridList" title="#/api/sap.f.GridList" class="sap-doc" alt="#/api/sap.f.GridList">API Reference</a> and
+										the <a href="#/entity/sap.f.GridList" title="#/entity/sap.f.GridList" class="sap-doc" alt="#/entity/sap.f.GridList">Samples</a>.<p></p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.BadgeCustomData</code></span></p>
+								<p>We have added a new <code>animation</code> property that
+									enables you to choose the animation type to be performed by the
+									badge element. For more information, see the <a href="#/api/sap.m.BadgeCustomData" title="#/api/sap.m.BadgeCustomData" class="sap-doc" alt="#/api/sap.m.BadgeCustomData">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><p>You can now
+									drag and resize the dialog using the keyboard. To enable this
+									behavior, you have to set the <code>draggable</code> and/or
+										<code>resizable</code> properties to
+										<code>true</code>. While the keyboard focus is located
+									on the title bar, the dialog can then be moved with the
+										<span class="keyWrap"><kbd class="key">Arrow</kbd></span> keys and resized with <span class="keys">
+										<span class="keyWrap"><kbd class="key">Shift</kbd></span>
+										<span class="keyWrap"><kbd class="key">Arrow</kbd></span>
+									</span> keys. For more information, see the <a href="#/entity/sap.m.Dialog/sample/sap.m.sample.Dialog" title="#/entity/sap.m.Dialog/sample/sap.m.sample.Dialog" class="sap-doc" alt="#/entity/sap.m.Dialog/sample/sap.m.sample.Dialog">Sample</a>.</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.Image</code></span></p>
+								<p>With the new <code>lazyLoading</code> property, you can now
+									ensure that off-screen images are loaded early enough so that
+									they finish loading once the user scrolls near them. For more information, see the <a href="#/api/sap.m.Image" title="#/api/sap.m.Image" class="sap-doc" alt="#/api/sap.m.Image">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.PlanningCalendar</code></span></p>
+								<p>As an application developer you can now use the following new
+										functions:</p><ul class="ul ">
+										<li class="li">
+											<p><code>GetEndDate</code> returns the end date that
+												is visible in current state of the control.</p>
+										</li>
+										<li class="li">
+											<p><code>GetVisibleIntervalsCount</code> returns the
+												number of intervals (for example, hours, days,
+												weeks) that are currently visible.</p>
+										</li>
+									</ul>For more information, see the <a href="#/api/sap.m.PlanningCalendar/methods" title="#/api/sap.m.PlanningCalendar/methods" class="sap-doc" alt="#/api/sap.m.PlanningCalendar/methods">API
+										Reference</a>.<p></p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.Text</code></span></p>
+								<p>The new <code>emptyIndicatorMode</code> property allows
+									developers to display an empty text as a language dependent “-”
+									symbol. For more information, see the <a href="#/api/sap.m.Text" title="#/api/sap.m.Text" class="sap-doc" alt="#/api/sap.m.Text">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.Title</code></span></p>
+								<p>You can now place a link as a title. To enable this
+									functionality, we have introduced the <code>content</code>
+									aggregation, which accepts controls
+									(<code>sap.m.Link</code>) that implement the <a href="#/api/sap.ui.core.ITitleContent" title="#/api/sap.ui.core.ITitleContent" class="sap-doc" alt="#/api/sap.ui.core.ITitleContent"><code>sap.ui.core.ITitleContent</code></a>
+									interface. To place a link as a title you have to add the <a href="#/api/sap.m.Link" title="#/api/sap.m.Link" class="sap-doc" alt="#/api/sap.m.Link"><code>sap.m.Link</code></a> control to
+									the <code>content</code> aggregation. For more information, see the <a href="#/api/sap.m.Title" title="#/api/sap.m.Title" class="sap-doc" alt="#/api/sap.m.Title">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+						
+						
+						
+						
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.ui.integration.widgets.Card</code></span></p>
+								<ul class="ul ">
+									<li class="li">
+										<p>Integration cards now allow you to use arrays as values
+											in the manifest parameters. One example scenario is to
+											use an array parameter in expression binding inside the
+											visible property and to display only the elements that
+											have values. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/object/arrayParameters" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/object/arrayParameters" class="sap-doc">Sample</a> in
+												the Card Explorer.</p>
+									</li>
+									<li class="li">
+										<p>Two new experimental actions are now available in the
+											Calendar card that you can use to set dynamic data
+											fetching to be dependent of the selected date/month:</p><ul class="ul ">
+												<li class="li">
+												<p><code>DateChange</code> – triggered when a
+												date is selected.</p>
+												</li>
+												<li class="li">
+												<p><code>MonthChange</code> – triggered when
+												the currently displayed month is changed from the
+												pickers or from the arrow buttons.</p>
+												</li>
+											</ul>Both <code>DateChange</code> and
+												<code>MonthChange</code> actions are triggered
+											when the <code>Today</code> button is pressed. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/calendar/extension" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/calendar/extension" class="sap-doc">Samples</a> and
+												the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/calendar" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/calendar" class="sap-doc">Calendar
+												Card</a> section in the Card Explorer.<p></p>
+									</li>
+									<li class="li">The <code>Extension</code> feature is no longer in
+										experimental state. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/extension" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/extension" class="sap-doc">Samples</a> and
+											the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/extension" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/extension" class="sap-doc">Card
+												Extension</a> section in the Card
+										Explorer.</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.ui.layout.cssgrid.ResponsiveColumnLayout</code></span></p>
+								<p>We have enhanced the layout with higher density of responsive
+									breakpoints, providing flexibility and allowing developers to
+									configure the grid settings and display the content in the best
+									possible way. For more information, see the <a href="#/api/sap.ui.layout.cssgrid.ResponsiveColumnLayout" title="#/api/sap.ui.layout.cssgrid.ResponsiveColumnLayout" class="sap-doc" alt="#/api/sap.ui.layout.cssgrid.ResponsiveColumnLayout">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_r5v_3h5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Demo Kit
+				Improvements</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_e2h_2vq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Demo Kit HTML Title</span></p>
+								<p>We’ve improved the HTML title tag of the Demo Kit app to contain
+									more information about the page that is currently loaded. Now,
+									if you have multiple tabs with different Demo Kit content loaded
+									on them, you can see the specific page names directly from the
+									browser tab.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink"><br><strong>Parent topic: </strong><a href="topic/6660a59a8a22460a91fe65a0d96a567e">Previous Versions</a></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="relatedLinks"><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"><li><a href="topic/5a184109b1ec44e7ab7e43d40ef56847">What's New in OpenUI5 1.101</a></li><li><a href="topic/5deb78f36022473487be44cb3a71140a">What's New in OpenUI5 1.100</a></li><li><a href="topic/5e35c2512e014e3b9831afd1cd041ed4">What's New in OpenUI5 1.99</a></li><li><a href="topic/7aacb4e107c44c90b5b0dd97fcb1f333">What's New in OpenUI5 1.98</a></li><li><a href="topic/f21858fa6a07451c9cb86e0c023a7092">What's New in OpenUI5 1.97</a></li><li><a href="topic/b39a11b47d994e9cb81c7e80946ed976">What's New in OpenUI5 1.96</a></li><li><a href="topic/1b094659cfcf422c968ce17d39f89211">What's New in OpenUI5 1.95</a></li><li><a href="topic/2d6ffddd26dd41ba91a5cf1b38f6b0f6">What's New in OpenUI5 1.94</a></li><li><a href="topic/e9c83569a4a54f04a349c4152358f4ff">What's New in OpenUI5 1.93</a></li><li><a href="topic/1492551a0b8d4f58adc46eefcf58a2fa">What's New in OpenUI5 1.92</a></li><li><a href="topic/75777daa78734f2db4e4c8a8124c0644">What's New in OpenUI5 1.91</a></li><li><a href="topic/b47520229109430cba291b5290848c08">What's New in OpenUI5 1.90</a></li><li><a href="topic/08050365ef9f4777af7b3c139fdb0d82">What's New in OpenUI5 1.89</a></li><li><a href="topic/bda141b86c464e5bad7c0a0cc9dee753">What's New in OpenUI5 1.88</a></li><li><a href="topic/067e2fb0165145a5ac9b128b5853f7c9">What's New in OpenUI5 1.86</a></li><li><a href="topic/eeb5bd913fe448598e0449050143027a">What's New in OpenUI5 1.85</a></li><li><a href="topic/ccf76b76327c421e9d87ff7fc3d7ba41">What's New in OpenUI5 1.84</a></li><li><a href="topic/f081cf0a64784c62aa653e80036659f0">What's New in OpenUI5 1.82</a></li><li><a href="topic/f71563ccd2294cf0a59d16b62be0f7eb">What's New in OpenUI5 1.81</a></li><li><a href="topic/3294c688331c4e918a22dc0bb0892ff8">What's New in OpenUI5 1.80</a></li><li><a href="topic/edf8e35377d4452491cdc488030feb13">What's New in OpenUI5 1.79</a></li><li><a href="topic/d176be37229a45dbb1d6d0a1ae2f3167">What's New in OpenUI5 1.78</a></li><li><a href="topic/2ec6b6b03ee249928bba929eec3d2d74">What's New in OpenUI5 1.77</a></li><li><a href="topic/b9b0a3f223c14b9d99e0d86e649cafec">What's New in OpenUI5 1.76</a></li><li><a href="topic/dc3d3ce46105441db5543049fb1c11e7">What's New in OpenUI5 1.75</a></li><li><a href="topic/21fc6cb77b0c44aab55f045812e69c98">What's New in OpenUI5 1.74</a></li><li><a href="topic/7b826642c45d4b8d97c5013cdc240ad6">What's New in OpenUI5 1.73</a></li><li><a href="topic/25e532617b7f4b9bad842757324151ed">What's New in OpenUI5 1.72</a></li><li><a href="topic/609fd015eaf64bd2a4a5c0331590eb4c">What's New in OpenUI5 1.71</a></li><li><a href="topic/4e89fee547a24385826cddcfdf4df238">What's New in OpenUI5 1.70</a></li><li><a href="topic/41203fd3272b479d8c665357e3b21a43">What's New in OpenUI5 1.69</a></li><li><a href="topic/5531aef1adc8462392a5b8fe1178606e">What's New in OpenUI5 1.68</a></li><li><a href="topic/0968958c4143469d941dbe3b59e06142">What's New in OpenUI5 1.67</a></li><li><a href="topic/ebe7fda555aa466782090053d6f54f21">What's New in OpenUI5 1.66</a></li><li><a href="topic/9d2b1897722a4e99b60580fb09aa35e0">What's New in OpenUI5 1.65</a></li><li><a href="topic/1975e304ab924fb3b799240fdd9fe59b">What's New in OpenUI5 1.64</a></li><li><a href="topic/77e1dcc27c494d60ba0a03759b706e89">What's New in OpenUI5 1.63</a></li><li><a href="topic/27eea38eeb7b40d19d0dfe3ddf513175">What's New in OpenUI5 1.62</a></li><li><a href="topic/de4d50b6c0f649fa859e4657ff8557a6">What's New in OpenUI5 1.61</a></li><li><a href="topic/2a70354a2a38492a873333edc4b9a303">What's New in OpenUI5 1.60</a></li><li><a href="topic/b28edde1f4ad425d9247f3bbcdc5d9b7">What's New in OpenUI5 1.58</a></li><li><a href="topic/53b4b5ec2c83408a8da2cb6b9154c246">What's New in OpenUI5 1.56</a></li><li><a href="topic/f29023ebf9dc4a43b98516a5e2c43837">What's New in OpenUI5 1.54</a></li><li><a href="topic/a09dd79a24c041d288402768558a1d1a">What's New in OpenUI5 1.52</a></li><li><a href="topic/a8449849c81249bb8abd98b4b9342a4a">What's New in OpenUI5 1.50</a></li><li><a href="topic/2818f800e7424c5c91dbd495f8cb757b">What's New in OpenUI5 1.48</a></li><li><a href="topic/4cf0986450ca43e5a8d12dd66e999a77">What's New in OpenUI5 1.46</a></li><li><a href="topic/05ce1dc72c74475bada39234f6721f21">What's New in OpenUI5 1.44</a></li><li><a href="topic/4768f1ac7f0645929b4e9ea9981bb65e">What's New in OpenUI5 1.42</a></li><li><a href="topic/e659bd2383524a05b716916bcda9b368">What's New in OpenUI5 1.40</a></li><li><a href="topic/6a875f998994489483e8085705347d72#loio6a875f998994489483e8085705347d72">What's New in OpenUI5 1.38</a></li></ul></section></div></section></div></body></html>

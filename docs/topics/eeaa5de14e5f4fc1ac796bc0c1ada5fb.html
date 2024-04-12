@@ -1,0 +1,747 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loioeeaa5de14e5f4fc1ac796bc0c1ada5fb" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">JSDoc Guidelines</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">JSDoc Guidelines</h2></div><div class="shortdesc">Provides an overview of guidelines for creating JSDoc documentation. </div><p>To document JavaScript coding, you can
+			add
+			documentation comments to the code. Based on these comments,
+			the
+			descriptions of the
+			OpenUI5 entities are
+			generated and shown in the <span class="ph uicontrol">API Reference</span> of the Demo Kit. OpenUI5 uses the JSDoc3
+			toolkit,
+			which resembles JavaDoc, to generate the descriptions. For an
+			explanation of the available tags, see
+			<a href="https://jsdoc.app" title="https://jsdoc.app" class="external-link" target="_blank" rel="noopener">https://jsdoc.app</a>.</p><section id="section_wjj_hys_l2b">
+			<h2 class="title ">Basics of
+				JSDoc</h2>
+			<p>Here are some general principles
+				for
+				writing comments: </p>
+			<ul class="ul ">
+				<li class="li">
+					<p>Document the constructor with <code>@class</code>,
+							<code>@author</code>, <code>@since</code>, and so on.</p>
+				</li>
+				<li class="li">
+					<p>For subclasses, document the inheritance by using an
+							<code>@extends</code> tag in their constructor
+						doclet.</p>
+				</li>
+				<li class="li">
+					<p>Document at least public and protected methods with JSDoc, mark them as
+							<code>@public</code>
+						or <code>@protected</code>. For more information on these and other tags that determine the visibility of your method in
+						the <span class="ph uicontrol">API Reference</span>, see <a href="#/topic/b0d5fe2f1b0b497cbd67cd5a1d35fa4c.html" title="Tags such as @public or @private allow you to control the visibility of the JSDoc documentation." class="sap-doc">JSDoc Visibility Tags</a>.</p>
+				</li>
+				<li class="li">
+					<p>Document method parameters with
+						type
+						(in curly braces) and
+						parameter
+						name (in square brackets if optional).</p>
+				</li>
+				<li class="li">
+					<p>Use <code>@namespace</code> for static helper classes that only provide
+						static methods.</p>
+				</li>
+			</ul>
+			<p>For
+				an example of how to create a class, see <a href="#/topic/f6fba4c6e1cb49c7b355319ac9c8d1cd.html" title="Full example of a class definition, including JSDoc" class="sap-doc">Example for Defining a Class</a>.</p>
+		</section><section id="section_s55_3j2_p2b"><h2 class="title ">Descriptions</h2><p>A
+				documentation comment should provide the following content:</p><ul class="ul ">
+				<li class="li">
+					<p>Summary sentence at the beginning; the summary is reused, for example, for
+						tooltips and in summaries in the <span class="ph uicontrol">API
+						Reference</span></p>
+				</li>
+				<li class="li">
+					<p>Background information required to understand the object</p>
+				</li>
+				<li class="li">
+					<p>Special considerations that apply</p>
+				</li>
+				<li class="li">
+					<p>Detailed
+						description with additional information that does not repeat the
+						self-explanatory API name or summary</p>
+				</li>
+			</ul><div class="note   "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Note
+				</strong></div></div><div class="fig"><p>Avoid
+				implementation details and dependencies unless they are important for
+				usage.</p></div></div><section>
+				<h3 class="title ">Dos and Don'ts </h3>
+				<ul class="ul ">
+					<li class="li">
+						<p>To avoid line wrapping, make sure that each line of the description has a
+							similar length as the code. In the <span class="ph uicontrol">API
+							Reference</span>,
+							the
+							line
+							breaks in a description are ignored, and it appears
+							as a continuous text.</p>
+					</li>
+					<li class="li">
+						<p>Use a period at the end of each summary sentence. The punctuation is
+							required for JSDoc to identify the first sentence.</p>
+					</li>
+					<li class="li">
+						<p>Don’t use a period inside a summary sentence. For example, don’t use
+							“e.g.”, but write “for example” instead. Otherwise the summary sentence
+							will be cut off.</p>
+						
+					</li>
+				</ul>
+				<div class="note   "><div class="collapsible-icon sap-icon"><div class="title"><strong>
+					Note
+				</strong></div></div><div class="fig"><p>
+					</p><p>You can create links to external sources. The source should comply with standard legal
+						requirements. The required icons are added to the link as described in the
+						Demo Kit under <span class="ph menucascade">
+							<span class="ph uicontrol">Terms of Use</span>
+							<span class="ph uicontrol">Disclaimer</span>
+						</span>. For more information about creating links, see the
+						explanations below (@see and {@link}).</p>
+				<p></p></div></div>
+			</section><section>
+				<h3 class="title ">Recommendations for Writing
+					Descriptions</h3>
+				<ul class="ul ">
+					<li class="li">
+						<p>Don’t use exclamation marks.</p>
+					</li>
+					<li class="li">
+						<p>Make sure you spell acronyms correctly, for example, ID, JSON, URL.</p>
+					</li>
+					<li class="li">
+						<p>In the summary sentence, omit repetitive clauses
+							like
+							"This class" or "This method".</p>
+					</li>
+					<li class="li">
+						<p>For actions, start directly with an appropriate verb in the third person:
+							Adds, allocates, constructs, converts, deallocates, destroys, gets,
+							provides, reads, removes, represents, returns, sets, saves, and so
+							on.</p>
+						<p>For methods, use the following verbs:</p>
+						<div class="tableWrapper "><div class="fig"><table border="1" id="simpletable_sp2_xlv_q2b" class=" "><thead>
+								<tr><th colspan="1" rowspan="1">
+									<p>Type</p>
+								</th>
+								<th colspan="1" rowspan="1">
+									<p>Verb</p>
+								</th>
+							</tr></thead><tbody><tr>
+								<td colspan="1" rowspan="1">
+									<p>Constructor</p>
+								</td>
+								<td colspan="1" rowspan="1">
+									<p>Constructs</p>
+								</td>
+							</tr><tr>
+								<td colspan="1" rowspan="1">
+									<p>Boolean</p>
+								</td>
+								<td colspan="1" rowspan="1">
+									<p>Indicates (whether)</p>
+								</td>
+							</tr><tr>
+								<td colspan="1" rowspan="1">
+									<p>Getter</p>
+								</td>
+								<td colspan="1" rowspan="1">
+									<p>Gets</p>
+								</td>
+							</tr><tr>
+								<td colspan="1" rowspan="1">
+									<p>Setter</p>
+								</td>
+								<td colspan="1" rowspan="1">
+									<p>Sets</p>
+								</td>
+							</tr><tr>
+								<td colspan="1" rowspan="1">
+									<p>Other</p>
+								</td>
+								<td colspan="1" rowspan="1">
+									<p>Adds/Removes/Creates/Releases/Other verb that applies</p>
+								</td>
+							</tr></tbody></table></div></div>
+					</li>
+					<li class="li">
+						<p>For objects, use a noun phrase.</p>
+						<p>Example: Base class for navigation </p>
+					</li>
+				</ul>
+				
+			</section></section><section id="section_cfg_hvt_l2b">
+			<h2 class="title ">Inline and HTML Tags</h2>
+			<p>You can use inline and HTML tags in your comments. </p>
+			<p><span class="emphasis">Inline tags</span> can be placed anywhere in the comments. Inline tags
+				are denoted by curly brackets and have the following syntax: {@tagname comment}.</p>
+			<p><span class="emphasis">HTML tags</span> are used to format documentation comments.
+				HTML
+				tags have the standard HTML syntax:
+				&lt;tag&gt;...&lt;/tag&gt;.</p>
+			<p>The table provides an overview of the most common inline and HTML tags.</p>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_ezd_5yt_l2b" class=" "><colgroup><col width="1.0"><col width="1.0"><col width="1"><col width="1"><col width="1"></colgroup>
+					
+					
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">
+								<p>Tag</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>Use</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>Example</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>How to Use / Details</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>Type of Tag</p>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>{@link}</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Links
+									within
+									API Reference</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>{@link sap.ui.generic.app.navigation.service.NavError
+										Error}</code></p>
+								<p><code>{@link
+										sap.ui.comp.smarttable.SmartTable#event:beforeRebindTable}</code>
+								</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>To
+									replace the path with a display text, use it like this: {@link
+									&lt;path&gt; space &lt;display text&gt;}.</p>
+								<p>You can also use <code>#myMethod</code> for links within a
+									class or control to individual methods, for example. The leading
+									hash will then be removed automatically.</p>
+								<p>For other links, use the required syntax, for example,
+										<code>#event:name</code>.</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Inline</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>Empty line</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Creates a paragraph </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+							<td colspan="1" rowspan="1">
+								<p>Using
+									&lt;p&gt; is not necessary, since empty lines are used to define
+									paragraphs.</p>
+							</td>
+							<td colspan="1" rowspan="8">
+								<p>HTML</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>&lt;code&gt;…&lt;/code&gt; </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Technical entities (optional)</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>the &lt;code&gt;Button&lt;/code&gt; control</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>&lt;pre&gt;…&lt;/pre&gt;</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Code samples</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>&lt;ul&gt; </p>
+								<p>&lt;li&gt;…&lt;/li&gt;</p>
+								<p>&lt;li&gt;…&lt;/li&gt;</p>
+								<p>&lt;/ul&gt;</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Unordered lists</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>&lt;ol&gt; </p>
+								<p>&lt;li&gt;…&lt;/li&gt;</p>
+								<p>&lt;li&gt;…&lt;/li&gt;</p>
+								<p>&lt;/ol&gt;</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Ordered lists</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>&lt;strong&gt;… &lt;/strong&gt; or &lt;b&gt;…&lt;/b&gt;</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Bold font </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>&lt;i&gt;…&lt;/i&gt;</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Italics</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>&nbsp;</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Non-breaking
+									space</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+							<td colspan="1" rowspan="1">
+								<p>
+							</p></td>
+						</tr>
+					</tbody>
+				</table></div></div>
+		</section><section id="section_agg_ncm_n2b"><h2 class="title ">Block Tags</h2><p>You can also use block tags in your
+				comments. </p><p><span class="emphasis">Block tags</span> can only be placed in the tag
+				section below the comment. They are separated from the comment by an empty line
+				(recommended, but not a technical requirement). Block tags have the following
+				syntax: @tagname comment.</p><p>The table provides an overview of the most common
+				block tags.</p><div class="tableWrapper "><div class="fig"><table border="1" id="table_krl_ffm_n2b" class=" "><colgroup><col width="1.0"><col width="1.0"><col width="1.0"><col width="1.0"></colgroup>
+					
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">
+								<p>Tag</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>Use</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>Example</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>How to Use / Details</p>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@param </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Adds parameters</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<section class="lang-js"><div class="fig fig-codeblock"><div class="copyButton"><span style="display: none;">Hidden</span></div><div class="codeblock-wrapper"><pre class="codeblock">/**
+ * ...
+ * @param {string} statement The SQL statement to be prepared
+ * ...
+ */</pre></div></div></section>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Begin description with a capital letter.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@returns </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Adds return values</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@returns {type1|type2|...}
+										Description</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Begin description with a capital letter.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@throws </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								
+								<p>Adds the description of an exception if an error
+								occurs</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@throws {type} Description</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Begin description with a capital letter.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@author </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Adds the name of the developer responsible for the code</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@author Max Mustermann</code>
+								</p>
+							</td>
+							<td colspan="1" rowspan="2">
+								<p>This is an optional tag that is not displayed in
+									JSDoc.</p>
+								<p>If
+									you need to use the version tag, use ${version} so you don't
+									have to update this manually for each new version.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@version
+								</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Names the version for an entity</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@version 14.1.2</code></p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@see</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Adds information (for example, link to documentation or the SAP
+									Fiori Design Guidelines) in the header section of the
+										<span class="ph uicontrol">API Reference</span></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@see path</code></p>
+								
+								<p><code>@see free text</code></p>
+								<p><code>@see {@link topic:bed8274140d04fc0b9bcb2db42d8bac2 Smart
+										Table}</code>
+								</p>
+								<p><code>@see {@link fiori:/flexible-column-layout/ Flexible
+										Column Layout}</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>@see {@link topic:loio &lt;semantic control name&gt;} provides a
+									link to the documentation (developer guide). </p>
+								<p>If there are several @see tags with documentation links, only the
+									first one is shown in the header. The other ones are displayed
+									under <span class="ph uicontrol">Documentation Links</span> in the
+										<span class="ph uicontrol">Overview</span>
+									section.</p>
+								<p>For more generic topics that are not directly related to a class
+									or control, use inline links.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@since</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Adds the version in which an entity was first introduced</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@since 1.30</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Be as specific as possible (without mentioning patch levels for
+									new development), since this information is useful even for
+									internal purposes. For example, mention 1.27, even though this
+									is not an external release.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@deprecated </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Adds the version in which an entity was deprecated</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@deprecated As of version 1.28, replaced by {@link class
+										name}</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Be as specific as possible (without mentioning patch levels),
+									since this information is useful even for internal purposes. For
+									example, mention 1.27, even though this is not an external
+									release.</p>
+								<p>Provide information about what replaces the deprecated
+									entity.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@experimental</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Classifies an entity that is not ready for production use yet,
+									but available for testing purposes</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>@experimental As of version 1.56.0</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>The example provides the following output: </p>
+								<p><span class="emphasis">Experimental API since 1.56.0</span></p>
+								<p>Hence, no separate @since tag is required.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>@example </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Inserts a code sample after the comment</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<section class="lang-js"><div class="fig fig-codeblock"><div class="copyButton"><span style="display: none;">Hidden</span></div><div class="codeblock-wrapper"><pre class="codeblock">/**
+ * ...
+ * @example
+ * var id = myjob.schedules.add({
+ *     description: "Added at runtime, run every 10 minutes",
+ *     xscron: "* * * * * *\/10 0",
+ *     parameter: {
+ *         a: "c"</pre></div></div></section>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>The code sample is inserted automatically with &lt;pre&gt;. It is
+									always inserted right after the comment.</p>
+								<p>To insert an example somewhere else, for example, in the middle
+									of a comment, use &lt;pre&gt;. </p>
+								<p>You can add a header for the example by using &lt;caption&gt;.
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div><section>
+				<h3 class="title ">Tips for Using Block Tags</h3>
+				<ul class="ul ">
+					<li class="li">
+						<p>The order of the block tags is not mandatory from a technical
+							perspective, but recommended to ensure consistency. </p>
+						<p>For parameters, however, a fixed order is mandatory.</p>
+					</li>
+					<li class="li">
+						<p>There are more tags available, such as
+							<code>@class</code>or
+								<code>@name</code>.</p>
+					</li>
+				</ul>
+				
+			</section></section><section id="section_rh4_3yr_kgb">
+			<h2 class="title ">Links to API Documentation</h2>
+			<p>To refer to another entity within the <span class="ph uicontrol">API Reference</span>, you can use
+					<code>{@link}</code> in combination with the reference types shown in the
+				table below.</p>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_rkg_bds_kgb" class=" "><colgroup><col width="1"><col width="1"><col width="1"><col width="1"></colgroup>
+					
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">
+								<p>Type of Reference</p>
+							</th>
+							<th colspan="1" rowspan="1">
+								<p>Description</p>
+							</th>
+							<th colspan="1" rowspan="1">Example</th>
+							<th colspan="1" rowspan="1">
+								<p>Comment</p>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								
+								<p>&lt;full.path.ClassName&gt;</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to a class, interface, enumeration, or namespace</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>sap.ui.comp.smarttable.SmartTable</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>full.path.ClassName<span class="emphasis">#</span>method</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to an
+									instance
+									method of a class</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>sap.ui.comp.smarttable.SmartTable#getHeader</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>.prototype.</code> and # are interchangeable</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>full.path.ClassName<span class="emphasis">.prototype.</span>method</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to an instance method of a class</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p> </p>
+							</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>full.path.ClassName<span class="emphasis">.</span>method</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to a static method (or any other static property)</p>
+							</td>
+							<td colspan="1" rowspan="1">
+							</td><td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><code>#method</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to an instance method <span class="emphasis">within</span> a class </p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>#getHeader</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>You must use this type of reference <span class="emphasis">within</span> an API that you are
+									documenting, for example, within the <code>SmartTable</code>
+									control documentation, if you want to link to a method that
+									belongs to the control itself.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><code>#.method</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to a static method <span class="emphasis">within</span> a class</p>
+							</td>
+							<td colspan="1" rowspan="1">
+							</td><td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>full.path.ClassName<span class="emphasis">#event:</span>name</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to an event fired by an instance of a class</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p><code>sap.ui.comp.smarttable.SmartTable#event:beforeRebindTable</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><code>#event:name</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to an event <span class="emphasis">within</span> a class</p>
+							</td>
+							<td colspan="1" rowspan="1">
+							</td><td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>full.path.ClassName<span class="emphasis">#annotation:</span>name</p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to an instance annotation of a class</p>
+							</td>
+							<td colspan="1" rowspan="1">
+							</td><td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><code>#annotation:name</code></p>
+							</td>
+							<td colspan="1" rowspan="1">
+								<p>Refers to an annotation <span class="emphasis">within</span> a class</p>
+							</td>
+							<td colspan="1" rowspan="1"><code>#annotation:Text Text</code></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+					</tbody>
+				</table></div></div>
+		</section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink hidden"><br><strong>Parent topic: </strong></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="relatedLinks "><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"><li><a href="#/topic/b0d5fe2f1b0b497cbd67cd5a1d35fa4c.html" title="Tags such as @public or @private allow you to control the visibility of the JSDoc documentation." class="sap-doc">JSDoc Visibility Tags</a></li><li><a href="#/topic/30671a0ce976438aaddf32a2455ffb61.html" title="The use of the JSDoc toolkit has some pitfalls. By following the guidelines outlined below, these issues can be avoided." class="sap-doc">Common Pitfalls in JSDoc</a></li></ul></section></div></section></div></body></html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>IllustratedMessage</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>A combination of message and illustration to represent an empty or a success state.
+
+&lt;h3&gt;Overview&lt;/h3&gt;
+
+An &lt;code&gt;IllustratedMessage&lt;/code&gt; is a recommended combination of a solution-oriented message,
+an engaging illustration, and conversational tone to better communicate an empty or a success state
+than just show a message alone.
+Empty states are moments in the user experience where there’s no data to display.
+Success states are occasions to celebrate and reward a user’s special accomplishment or the completion of an important task.
+
+The &lt;code&gt;IllustratedMessage&lt;/code&gt; control is meant to be used inside container controls,
+for example a &lt;code&gt;Card&lt;/code&gt;, a &lt;code&gt;Dialog&lt;/code&gt;, or a &lt;code&gt;Page&lt;/code&gt;.
+
+&lt;h3&gt;Structure&lt;/h3&gt;
+
+The &lt;code&gt;IllustratedMessage&lt;/code&gt; consists of the following elements, which are displayed below
+each other in the following order:
+&lt;ul&gt;
+&lt;li&gt;Illustration&lt;/li&gt;
+&lt;li&gt;Title&lt;/li&gt;
+&lt;li&gt;Description&lt;/li&gt;
+&lt;li&gt;Additional Content&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Responsive Behavior&lt;/h3&gt;
+
+The &lt;code&gt;IllustratedMessage&lt;/code&gt; control can adapt depending on the API settings provided by the app developer
+and the available space of its parent container. Some of the structural elements are displayed differently or
+are omitted in the different breakpoint sizes (XS, S, M, L).</documentation>
+    <since>1.88</since>
+    <deprecation since="1.98">Use the {@link sap.m.IllustratedMessage} instead.</deprecation>
+    <baseType>sap.m/IllustratedMessage</baseType>
+</control>

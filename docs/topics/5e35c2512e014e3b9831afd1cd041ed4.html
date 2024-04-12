@@ -1,0 +1,204 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loio5e35c2512e014e3b9831afd1cd041ed4" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">What's New in OpenUI5
+		1.99</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">What's New in OpenUI5
+		1.99</h2></div><div class="shortdesc">With
+		this release OpenUI5 is upgraded
+		from version 1.98 to 1.99.</div><section id="section_vvy_452_rrb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Preview and Announcements</h2></div><div class="fig"><p>The following information concerns important upcoming changes. UI changes may have an impact on the user experience and may require
+				test cases to be adapted.</p><div class="tableWrapper "><div class="fig"><table border="1" id="table_wvy_452_rrb" class=" "><colgroup><col width="1"><col width="1"><col width="1"></colgroup>
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Type</th>
+							<th colspan="1" rowspan="1">Description</th>
+							<th colspan="1" rowspan="1">Available as of OpenUI5 Version</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">Announcement</td>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Reminder: Outdated  Versions to Be Removed
+										from the CDN</span></p>
+								<p>For security reasons,  versions that are no longer
+									maintained will be removed from the UI5 content delivery network (CDN) one year after their end of maintenance. If
+									a version is still in maintenance, patches of that version that are older than one year will also be removed. We
+									have noted that a number of customers are still using such outdated versions or patches. If this affects you,
+									please note that once these versions or patches are removed, your applications will break. Please update to a more
+									recent version or patch. For more information, see: <a href="https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/" title="https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/" class="external-link" target="_blank" rel="noopener">Removing
+										Outdated UI5 Versions from UI5 CDN</a> as well as the UI5 notifications in the Demo Kit.</p>
+							</td>
+							<td colspan="1" rowspan="1">n/a</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_qwl_pb5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_tpj_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V4 Model</span></p>
+								<p>The new version of the OpenUI5 OData V4 model introduces the following features:</p>
+								<ul class="ul ">
+									<li class="li">
+										<p>You can now use the <code>filter</code>,
+												<code>sort</code>,
+												<code>changeParameters</code>, and
+												<code>suspend</code> methods on a list binding
+											with transient contexts if the list binding is either a
+												<a href="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/getRootBinding" title="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/getRootBinding" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/getRootBinding">root
+												binding</a> or its <code>$$ownRequest</code>
+											binding parameter is set to <code>true</code>.</p>
+									</li>
+									<li class="li">
+										<p>We removed the experimental
+												<code>sap.ui.model.odata.v4.ODataContextBinding#moveEntityTo</code>
+											method.</p>
+									</li>
+									<li class="li">
+										<p>The new <a href="#/api/sap.ui.model.odata.v4.ODataModel%23methods/getKeepAliveContext" title="#/api/sap.ui.model.odata.v4.ODataModel%23methods/getKeepAliveContext" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataModel%23methods/getKeepAliveContext"><code>sap.ui.model.odata.v4.ODataModel#getKeepAliveContext</code></a>
+											method searches for a matching context in list bindings
+											with the new <a href="#/api/sap.ui.model.odata.v4.ODataModel%23methods/bindList" title="#/api/sap.ui.model.odata.v4.ODataModel%23methods/bindList" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataModel%23methods/bindList"><code>$$getKeepAliveContext</code></a>
+											binding parameter. The found context is <a href="#/api/sap.ui.model.odata.v4.Context%23methods/setKeepAlive" title="#/api/sap.ui.model.odata.v4.Context%23methods/setKeepAlive" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.Context%23methods/setKeepAlive">set to
+												keep-alive</a> and returned. For more information,
+											see <a href="#/topic/648e360fa22d46248ca783dc6eb44531.html#loio648e360fa22d46248ca783dc6eb44531/section_relativeBindings" title="648e360fa22d46248ca783dc6eb44531.xml#loio648e360fa22d46248ca783dc6eb44531/section_relativeBindings" class="sap-doc">Relative Bindings</a>.</p>
+									</li>
+									<li class="li">
+										<p>In a list binding, you can now create new records at the
+											beginning of the list, but below previously created new
+											records. For this, you have to set the
+												<code>bAtEnd</code> parameter to
+												<code>false</code> in the first call of <a href="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create" title="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create"><code>sap.ui.model.odata.v4.ODataListBinding#create</code></a>,
+											and to <code>true</code> in all subsequent
+											calls.</p>
+									</li>
+									<li class="li">
+										<p>We enabled the <a href="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create" title="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create">creation</a> of inactive rows, introduced with OpenUI5 1.97 for <code>Auto</code> update groups, also
+											for <code>API</code> groups. For more information on
+											batch groups, see <a href="#/topic/74142a38e3d4467c8d6a70b28764048f.html" title="OData V4 allows you to group multiple operations into a single HTTP request payload, as described in the official OData V4 specification Part 1, Batch Requests (see the link under Related Information for more details)." class="sap-doc">Batch Control</a>.</p>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_rqn_wd5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_qcq_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.Carousel</code></span></p>
+								<p>The control now shows <code>sap.m.illustratedMessage</code>
+									in use cases where there’s nothing to display. For more information, see the <a href="#/api/sap.m.Carousel" title="#/api/sap.m.Carousel" class="sap-doc" alt="#/api/sap.m.Carousel">API Reference</a> and
+										the <a href="#/entity/sap.m.Carousel/sample/sap.m.sample.CarouselEmptyMessages" title="#/entity/sap.m.Carousel/sample/sap.m.sample.CarouselEmptyMessages" class="sap-doc" alt="#/entity/sap.m.Carousel/sample/sap.m.sample.CarouselEmptyMessages">Sample</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.DynamicDateRange</code>
+										(Experimental)</span></p>
+								<p>We have added new standard options to the control:</p>
+								<ul class="ul ">
+									<li class="li">
+										<p><code>Date and Time</code>: Used to select a single
+											Date/Time value with a
+											<code>DateTimePicker</code>.</p>
+									</li>
+									<li class="li">
+										<p><code>From / To (Date and Time)</code>, <code>From
+												(Date and Time)</code>
+											<code>То (Date and Time)</code>. These options are
+											similar to the existing <code>From / To</code>,
+												<code>From</code>, and <code>To</code>, but
+											the new ones include time selection. When the new
+											options are not used together with their date-only
+											alternatives, their names are simplified, respectively
+											to <code>From / To</code>, <code>From</code>,
+											and <code>To</code>.</p>
+									</li>
+									<li class="li">
+										<p><code>Month in Year</code>: When this option is
+											selected, a <code>Calendar</code> control appears,
+											and the user can pick a month and a year.</p>
+									</li>
+								</ul>
+								<p>For more information, see the <a href="#/api/sap.m.TimePicker" title="#/api/sap.m.TimePicker" class="sap-doc" alt="#/api/sap.m.TimePicker">API Reference</a> and
+										the <a href="#/entity/sap.m.TimePicker/sample/sap.m.sample.TimePicker" title="#/entity/sap.m.TimePicker/sample/sap.m.sample.TimePicker" class="sap-doc" alt="#/entity/sap.m.TimePicker/sample/sap.m.sample.TimePicker">Sample</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.SinglePlanningCalendar</code></span></p>
+								<p>We have introduced new behavior – an option to zoom in and zoom
+									out to make the calendar appointments easier to read. You can do
+									this by using the new <code>scaleFactor</code> property that
+									changes the height of the calendar rows. For more information, see the <a href="#/api/sap.m.SinglePlanningCalendar" title="#/api/sap.m.SinglePlanningCalendar" class="sap-doc" alt="#/api/sap.m.SinglePlanningCalendar">API Reference</a> and
+										the <a href="#/entity/sap.m.SinglePlanningCalendar" title="#/entity/sap.m.SinglePlanningCalendar" class="sap-doc" alt="#/entity/sap.m.SinglePlanningCalendar">Sample</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>
+								</p><p>You can now drag the <code>UploadSetItems</code> within
+										<code>UploadSet</code> to rearrange the items. </p>
+								<p>The <code>itemDragStart</code> and <code>itemDrop</code>
+									events are also being exposed. These events return the item as a
+									parameter to the event handler. The events are triggered when
+									you drag and drop items that have already been uploaded.</p>
+							</td>
+						</tr>
+						
+						
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.ui.integration.widgets.Card</code></span></p>
+								<ul class="ul ">
+									<li class="li">
+										<p>List, Table, and Timeline cards now (experimentally)
+											support pagination. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/pagination" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/pagination" class="sap-doc">Pagination</a>
+												section and the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/pagination/client" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/pagination/client" class="sap-doc">Sample</a> in
+												the Card Explorer.</p>
+									</li>
+									<li class="li">
+										<p>We have (experimentally) enabled the List, Table,
+											Analytical, and Timeline cards to display illustrated
+											messages when there is no data for the card’s content.
+											In addition, you can use the card manifest to further
+											configure specific illustrated messages and texts for
+											chosen no-data scenarios. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/configuration/customErrorMessages" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/configuration/customErrorMessages" class="sap-doc">Custom Error
+												Message</a> section and the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/customErrorMessages" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/customErrorMessages" class="sap-doc">Sample</a> in
+												the Card Explorer.</p>
+									</li>
+									<li class="li">
+										<p>The Adaptive card now supports schema 1.3 of MS Adaptive
+											Cards. This comes with several new features:
+												<code>label</code> support for input elements
+											inside cards; support for required fields via the
+												<code>isRequired</code> property of the input
+											elements; support for <code>errorMessage</code>;
+											support for the <code>style</code> property for
+											actions. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/adaptive" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/adaptive" class="sap-doc"> Adaptive
+												Card</a> Learn section and the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/adaptive/styled-actions" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/adaptive/styled-actions" class="sap-doc"> Styled Actions
+												Sample</a> in the Card Explorer.</p>
+									</li>
+									<li class="li">
+										<p>The Calendar card supports placeholder loading - a type
+											of busy indicator that provides the user with a rough
+											outline of the content while it is loading.</p>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_cps_cg5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Deprecations</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_p1z_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>There are currently no major deprecations. For a complete list of all deprecations, see <a href="#/api/deprecated" title="#/api/deprecated" class="sap-doc" alt="#/api/deprecated">Deprecated
+										APIs</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink"><br><strong>Parent topic: </strong><a href="topic/6660a59a8a22460a91fe65a0d96a567e">Previous Versions</a></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="relatedLinks"><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"><li><a href="topic/5a184109b1ec44e7ab7e43d40ef56847">What's New in OpenUI5 1.101</a></li><li><a href="topic/5deb78f36022473487be44cb3a71140a">What's New in OpenUI5 1.100</a></li><li><a href="topic/7aacb4e107c44c90b5b0dd97fcb1f333">What's New in OpenUI5 1.98</a></li><li><a href="topic/f21858fa6a07451c9cb86e0c023a7092">What's New in OpenUI5 1.97</a></li><li><a href="topic/b39a11b47d994e9cb81c7e80946ed976">What's New in OpenUI5 1.96</a></li><li><a href="topic/1b094659cfcf422c968ce17d39f89211">What's New in OpenUI5 1.95</a></li><li><a href="topic/2d6ffddd26dd41ba91a5cf1b38f6b0f6">What's New in OpenUI5 1.94</a></li><li><a href="topic/e9c83569a4a54f04a349c4152358f4ff">What's New in OpenUI5 1.93</a></li><li><a href="topic/1492551a0b8d4f58adc46eefcf58a2fa">What's New in OpenUI5 1.92</a></li><li><a href="topic/75777daa78734f2db4e4c8a8124c0644">What's New in OpenUI5 1.91</a></li><li><a href="topic/b47520229109430cba291b5290848c08">What's New in OpenUI5 1.90</a></li><li><a href="topic/08050365ef9f4777af7b3c139fdb0d82">What's New in OpenUI5 1.89</a></li><li><a href="topic/bda141b86c464e5bad7c0a0cc9dee753">What's New in OpenUI5 1.88</a></li><li><a href="topic/e315108a469f4a729030299a3bc84b77">What's New in OpenUI5 1.87</a></li><li><a href="topic/067e2fb0165145a5ac9b128b5853f7c9">What's New in OpenUI5 1.86</a></li><li><a href="topic/eeb5bd913fe448598e0449050143027a">What's New in OpenUI5 1.85</a></li><li><a href="topic/ccf76b76327c421e9d87ff7fc3d7ba41">What's New in OpenUI5 1.84</a></li><li><a href="topic/f081cf0a64784c62aa653e80036659f0">What's New in OpenUI5 1.82</a></li><li><a href="topic/f71563ccd2294cf0a59d16b62be0f7eb">What's New in OpenUI5 1.81</a></li><li><a href="topic/3294c688331c4e918a22dc0bb0892ff8">What's New in OpenUI5 1.80</a></li><li><a href="topic/edf8e35377d4452491cdc488030feb13">What's New in OpenUI5 1.79</a></li><li><a href="topic/d176be37229a45dbb1d6d0a1ae2f3167">What's New in OpenUI5 1.78</a></li><li><a href="topic/2ec6b6b03ee249928bba929eec3d2d74">What's New in OpenUI5 1.77</a></li><li><a href="topic/b9b0a3f223c14b9d99e0d86e649cafec">What's New in OpenUI5 1.76</a></li><li><a href="topic/dc3d3ce46105441db5543049fb1c11e7">What's New in OpenUI5 1.75</a></li><li><a href="topic/21fc6cb77b0c44aab55f045812e69c98">What's New in OpenUI5 1.74</a></li><li><a href="topic/7b826642c45d4b8d97c5013cdc240ad6">What's New in OpenUI5 1.73</a></li><li><a href="topic/25e532617b7f4b9bad842757324151ed">What's New in OpenUI5 1.72</a></li><li><a href="topic/609fd015eaf64bd2a4a5c0331590eb4c">What's New in OpenUI5 1.71</a></li><li><a href="topic/4e89fee547a24385826cddcfdf4df238">What's New in OpenUI5 1.70</a></li><li><a href="topic/41203fd3272b479d8c665357e3b21a43">What's New in OpenUI5 1.69</a></li><li><a href="topic/5531aef1adc8462392a5b8fe1178606e">What's New in OpenUI5 1.68</a></li><li><a href="topic/0968958c4143469d941dbe3b59e06142">What's New in OpenUI5 1.67</a></li><li><a href="topic/ebe7fda555aa466782090053d6f54f21">What's New in OpenUI5 1.66</a></li><li><a href="topic/9d2b1897722a4e99b60580fb09aa35e0">What's New in OpenUI5 1.65</a></li><li><a href="topic/1975e304ab924fb3b799240fdd9fe59b">What's New in OpenUI5 1.64</a></li><li><a href="topic/77e1dcc27c494d60ba0a03759b706e89">What's New in OpenUI5 1.63</a></li><li><a href="topic/27eea38eeb7b40d19d0dfe3ddf513175">What's New in OpenUI5 1.62</a></li><li><a href="topic/de4d50b6c0f649fa859e4657ff8557a6">What's New in OpenUI5 1.61</a></li><li><a href="topic/2a70354a2a38492a873333edc4b9a303">What's New in OpenUI5 1.60</a></li><li><a href="topic/b28edde1f4ad425d9247f3bbcdc5d9b7">What's New in OpenUI5 1.58</a></li><li><a href="topic/53b4b5ec2c83408a8da2cb6b9154c246">What's New in OpenUI5 1.56</a></li><li><a href="topic/f29023ebf9dc4a43b98516a5e2c43837">What's New in OpenUI5 1.54</a></li><li><a href="topic/a09dd79a24c041d288402768558a1d1a">What's New in OpenUI5 1.52</a></li><li><a href="topic/a8449849c81249bb8abd98b4b9342a4a">What's New in OpenUI5 1.50</a></li><li><a href="topic/2818f800e7424c5c91dbd495f8cb757b">What's New in OpenUI5 1.48</a></li><li><a href="topic/4cf0986450ca43e5a8d12dd66e999a77">What's New in OpenUI5 1.46</a></li><li><a href="topic/05ce1dc72c74475bada39234f6721f21">What's New in OpenUI5 1.44</a></li><li><a href="topic/4768f1ac7f0645929b4e9ea9981bb65e">What's New in OpenUI5 1.42</a></li><li><a href="topic/e659bd2383524a05b716916bcda9b368">What's New in OpenUI5 1.40</a></li><li><a href="topic/6a875f998994489483e8085705347d72#loio6a875f998994489483e8085705347d72">What's New in OpenUI5 1.38</a></li></ul></section></div></section></div></body></html>

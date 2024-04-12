@@ -1,0 +1,828 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loio1ba0e44f1036439b95f25527664f14f7" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">ESLint Code Checks</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">ESLint Code Checks</h2></div><div class="shortdesc">OpenUI5 uses ESLint to check JavaScript sources.</div><p>The following tables show the ESLint rules that should be enabled for the OpenUI5 projects.</p><section>
+			<h2 class="title ">Rule Sets</h2>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_i4g_r3n_np" class="tableFullWidth "><colgroup><col width="1.0"><col width="1.0"><col width="1.0"><col width="1.0"></colgroup>
+					
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Rule</th>
+							<th colspan="1" rowspan="1">ESLint default</th>
+							<th colspan="1" rowspan="1">Core</th>
+							<th colspan="1" rowspan="1">Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-cond-assign</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-console</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-constant-condition</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-comma-dangle</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>error/warning</b></td>
+							<td colspan="1" rowspan="1">can be set to warning if lib only supports IE9</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-control-regex</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-debugger</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-dupe-keys</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-empty</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-empty-class</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-ex-assign </code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-extra-boolean-cast</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-extra-parens</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-extra-semi</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-func-assign</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-inner-declarations</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-invalid-regexp</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-negated-in-lhs</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-obj-calls</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-regex-spaces</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-sparse-arrays</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-unreachable</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>use-isnan</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>valid-jsdoc</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1"><code>requireReturn</code> = false</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>valid-typeof</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+					</tbody>
+				</table></div></div>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_gwc_t3n_np" class="tableFullWidth "><colgroup><col width="1.04"><col width="1"><col width="1.02"><col width="1.02"></colgroup>
+					
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Rule</th>
+							<th colspan="1" rowspan="1">ESLint default</th>
+							<th colspan="1" rowspan="1">Core</th>
+							<th colspan="1" rowspan="1">Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><code>block-scoped-var</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">currently only warning because of wrong behaviour in switch statement</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>complexity</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>consistent-return</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>curly</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>default-case</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>dot-notation</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>off</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>eqeqeq</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1"><code>smart</code></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>guard-for-in</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-alert</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-caller</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-div-regex</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-else-return</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-empty-label</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-eq-null</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-eval</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-extend-native</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-fallthrough</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-floating-decimal</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-implied-eval</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-labels</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-iterator</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-lone-blocks</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-loop-func</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-multi-str</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-native-reassign</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-new </code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-new-func</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-new-wrappers</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-octal</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-octal-escape</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-proto</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-redeclare</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-return-assign</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-script-url</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-self-compare</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-sequences</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-unused-expressions</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-warning-comments</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-with</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>radix</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>wrap-life</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">any</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>yoda</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+					</tbody>
+				</table></div></div>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_vxj_v3n_np" class="tableFullWidth "><colgroup><col width="1.0"><col width="1.0"><col width="1.0"></colgroup>
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Rule</th>
+							<th colspan="1" rowspan="1">ESLint default</th>
+							<th colspan="1" rowspan="1">Core</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-extra-strict</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>strict</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+						</tr>
+					</tbody>
+				</table></div></div>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_el2_x3n_np" class="tableFullWidth "><colgroup><col width="1.0"><col width="1.0"><col width="1.0"><col width="1.0"></colgroup>
+					
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Rule</th>
+							<th colspan="1" rowspan="1">ESLint default</th>
+							<th colspan="1" rowspan="1">Core</th>
+							<th colspan="1" rowspan="1">Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-catch-shadow</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-delete-var</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-label-var</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-shadow</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-shadow-restricted-names</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-undef</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-undefined</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-undef-init</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-unused-vars</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><code>vars = all</code>, <code>args</code> = none </td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-use-before-define</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+					</tbody>
+				</table></div></div>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_yy2_bjn_np" class="tableFullWidth "><colgroup><col width="1.0"><col width="1.0"><col width="1.0"></colgroup>
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Rule</th>
+							<th colspan="1" rowspan="1">ESLint default</th>
+							<th colspan="1" rowspan="1">Core</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><code>handle-callback-err</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-mixed-requires</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-new-require</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-path-concat</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-process-exit </code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-restricted-modules</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-sync</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+					</tbody>
+				</table></div></div>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_d5f_2jn_np" class="tableFullWidth "><colgroup><col width="1.0"><col width="1.0"><col width="1.0"><col width="1.0"></colgroup>
+					
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Rule</th>
+							<th colspan="1" rowspan="1">ESLint default</th>
+							<th colspan="1" rowspan="1">Core</th>
+							<th colspan="1" rowspan="1">Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><code>brace-style</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1"><code>singleLine = false</code>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>camelcase</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">warning</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>consistent-this</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1"><code>that</code></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>eol-last</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>off</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>func-names</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>func-style</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>new-cap</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>new-parens</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-nested-ternary</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-array-constructor</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-lonely-if</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-new-object</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-spaced-func</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-space-before-semi </code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-ternary </code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-trailing-spaces</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>off</b></td>
+							<td colspan="1" rowspan="1">error, but too many places to change</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-underscore-dangle</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><b>off</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-wrap-func</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-mixed-spaces-and-tabs</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1"><code>smart</code></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>quotes</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>quote-props</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>semi</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>sort-vars</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>keyword-spacing</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1"><code>“after”: true</code></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>space-in-brackets</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>space-infix-ops</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>space-return-throw-case</code></td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">error</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>space-unary-ops</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>error</b></td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>max-nested-callbacks</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1"><b>warning</b></td>
+							<td colspan="1" rowspan="1"><code>3</code></td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>one-var</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>wrap-regex</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">
+						</td></tr>
+					</tbody>
+				</table></div></div>
+			<div class="tableWrapper "><div class="fig"><table border="1" id="table_ung_gjn_np" class="tableFullWidth "><colgroup><col width="1.0"><col width="1.0"><col width="1.0"></colgroup>
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Rule</th>
+							<th colspan="1" rowspan="1">ESLint default</th>
+							<th colspan="1" rowspan="1">SAPUI5 Core</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1"><code>max-depth</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>max-len</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>max-params</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>max-statements</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-bitwise</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1"><code>no-plus</code></td>
+							<td colspan="1" rowspan="1">off</td>
+							<td colspan="1" rowspan="1">off</td>
+						</tr>
+					</tbody>
+				</table></div></div>
+			<p>For more information about the rules, see the rules documentation provided on <a href="http://eslint.org" title="http://eslint.org" class="external-link" target="_blank" rel="noopener">http://eslint.org</a>.</p>
+		</section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink hidden"><br><strong>Parent topic: </strong></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="hidden relatedLinks "><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"></ul></section></div></section></div></body></html>

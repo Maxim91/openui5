@@ -1,0 +1,8 @@
+<mvc:View height="100%" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m"
+		   controllerName="sap.ui.mdc.sample.filterbar.adaptFiltersDialog.Test">
+
+	<l:VerticalLayout class="sapUiContentPadding" width="100%">
+		<m:Button text="Open Adapt Filters Dialog" press="onAdaptFiltersDialogPress"/>
+	</l:VerticalLayout>
+
+</mvc:View>

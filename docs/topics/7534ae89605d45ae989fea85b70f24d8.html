@@ -1,0 +1,141 @@
+<html><head></head><body><div id="d4h5-main-container" class="dk-main"><section id="loio7534ae89605d45ae989fea85b70f24d8" class=" section topic"><div class="collapsible-icon sap-icon innerTitle"><h2 class="title ">What's New in OpenUI5
+		1.103</h2></div><div class="fig"><div class="topictitle1 title"><h2 class="title ">What's New in OpenUI5
+		1.103</h2></div><div class="shortdesc">With
+		this release OpenUI5 is upgraded
+		from version 1.102 to 1.103.</div><section id="section_fwt_nbw_5tb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Preview and Announcements</h2></div><div class="fig"><p>The following information concerns important upcoming changes. UI changes may have an impact on the user experience and may require
+				test cases to be adapted.</p><div class="tableWrapper "><div class="fig"><table border="1" id="table_gwt_nbw_5tb" class=" "><colgroup><col width="1"><col width="1"><col width="1"></colgroup>
+					
+					
+					
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1">Type</th>
+							<th colspan="1" rowspan="1">Description</th>
+							<th colspan="1" rowspan="1">Available as of OpenUI5 Version</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">Announcement</td>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">Reminder: Outdated OpenUI5 Versions to Be
+										Removed from the CDN</span></p>
+								<p>For security reasons, OpenUI5 versions that are no
+									longer maintained will be removed from the UI5 content delivery network (CDN) one year after their end of
+									maintenance. If a version is still in maintenance, patches of that version that are older than one year will also
+									be removed. We have noted that a number of customers are still using such outdated versions or patches. If this
+									affects you, please note that once these versions or patches are removed, your applications will break. Please
+									update to a more recent version or patch. For more information, see: <a href="https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/" title="https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/" class="external-link" target="_blank" rel="noopener">Removing
+										Outdated UI5 Versions from UI5 CDN</a> as well as the UI5 notifications in the Demo Kit.</p>
+							</td>
+							<td colspan="1" rowspan="1">n/a</td>
+						</tr>
+						
+						
+					</tbody>
+				</table></div></div></div></section><section id="section_qwl_pb5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Features</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_tpj_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis">OpenUI5 OData V4 Model</span></p>
+								<p>The new version of the OpenUI5 OData V4 model introduces the following features:</p>
+								<ul class="ul ">
+									<li class="li">We now provide the new
+											<code>sap.ui.model.odata.v4.ODataModel#delete</code>
+											method. For more information, see the <a href="#/api/sap.ui.model.odata.v4.ODataModel%23methods/delete" title="#/api/sap.ui.model.odata.v4.ODataModel%23methods/delete" class="sap-doc" alt="#/api/sap.ui.model.odata.v4.ODataModel%23methods/delete">API
+											Reference</a>.</li>
+									<li class="li">Multiple requests for absolute property bindings of
+										singleton properties are now merged. For more information,
+										see <a href="#/topic/648e360fa22d46248ca783dc6eb44531.html#loio648e360fa22d46248ca783dc6eb44531/section_APBS" title="648e360fa22d46248ca783dc6eb44531.xml#loio648e360fa22d46248ca783dc6eb44531/section_APBS" class="sap-doc">Absolute Property Bindings of Singletons</a>.</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_rqn_wd5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Improved
+				Controls</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_qcq_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.DateRangeSelection</code>,
+											<code>sap.m.OverflowToolbar</code>, and
+											<code>sap.m.IOverflowToolbarContent</code></span></p>
+								<p>We have implemented <code>sap.m.OverflowToolbar</code> on the
+										<code>sap.m.DateRangeSelection</code> to allow it to go
+									to the overflow menu. For more information, see the <a href="#/api/sap.m.OverflowToolbar" title="#/api/sap.m.OverflowToolbar" class="sap-doc" alt="#/api/sap.m.OverflowToolbar">API
+										Reference</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.MessageBox</code></span></p>
+								<p>We have enhanced the <code>details</code> property and now it
+									can also be a function that asynchronously fetches details from
+									the backend. For more information, see the <a href="#/entity/sap.m.MessageBox/sample/sap.m.sample.MessageBoxInfo" title="#/entity/sap.m.MessageBox/sample/sap.m.sample.MessageBoxInfo" class="sap-doc" alt="#/entity/sap.m.MessageBox/sample/sap.m.sample.MessageBoxInfo">Sample</a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.m.plugins.DataStateIndicator</code></span></p>
+								<p>The <code>MessageStrip</code> control, which is offered by
+									the <code>DataStateIndicator</code> plugin, provides various
+									messages for users that tell them about the current state of the
+									UI. The new <code>close</code> event of
+										<code>DataStateIndicator</code> is fired when the
+										<span class="ph uicontrol">Close</span> button of the
+										<code>MessageStrip</code> control is pressed. This
+									allows applications to intervene, for example, and let users
+									remove these messages from the UI. For more information, see the <a href="#/api/sap.m.plugins.DataStateIndicator%23events/close" title="#/api/sap.m.plugins.DataStateIndicator%23events/close" class="sap-doc" alt="#/api/sap.m.plugins.DataStateIndicator%23events/close">API Reference</a> for
+											<code>DataStateIndicator</code>, the <a href="#/api/sap.m.MessageStrip%23events/close" title="#/api/sap.m.MessageStrip%23events/close" class="sap-doc" alt="#/api/sap.m.MessageStrip%23events/close">API Reference</a> for
+											<code>MessageStrip</code>, and the <a href="#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableDataState" title="#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableDataState" class="sap-doc" alt="#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableDataState">Sample</a>.</p>
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p><span class="emphasis"><code>sap.ui.integration.widgets.Card</code></span></p>
+								<ul class="ul ">
+									<li class="li">
+										<p>Colors in the <code>StackedBar</code> microcharts in
+											List cards no longer accept
+												<code>sap.m.ValueCSSColor</code> values. Now the
+											colors should have standard semantic values provided by
+											the <code>sap.m.ValueColor</code> enum. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/microcharts" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/microcharts" class="sap-doc">Card
+												Microcharts</a> section in the Card
+												Explorer.</p>
+									</li>
+									<li class="li">
+										<p>We have allowed the usage of time series charts in the
+											Analytical card. To enable this feature, we now pass the
+											dimensions’ <code>dataType</code> parameter in the
+											manifest. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/timeAxis" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/timeAxis" class="sap-doc">Column with Time
+												Axis</a> sample in the Card Explorer.</p>
+									</li>
+									<li class="li">
+										<p>We have added documentation and a sample about
+											intent-based navigation actions. Intent-based navigation
+											is a mechanism, which has to be supported by the host
+											environment, that allows you to launch applications or
+											perform actions on semantic objects by using abstract
+											intents. For more information, see the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/actions/navigation" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/actions/navigation" class="sap-doc">Navigation</a>
+												section and the <a href="test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/cardActions/ibn" title="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/cardActions/ibn" class="sap-doc">Sample</a> in
+												the Card Explorer.</p>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section id="section_cps_cg5_zcb" class="collapsible expanded"><div class="collapsible-icon sap-icon"><h2 class="title collapsible expanded">Deprecations</h2></div><div class="fig"><div class="tableWrapper "><div class="fig"><table border="1" id="table_p1z_dvq_mfb" class="tableFullWidth "><colgroup><col width="1"></colgroup>
+					
+					<tbody>
+						
+						<tr>
+							<td colspan="1" rowspan="1">
+								<p>For a complete list of all deprecations, see <a href="#/api/deprecated" title="#/api/deprecated" class="sap-doc" alt="#/api/deprecated">Deprecated
+										APIs</a>.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table></div></div></div></section><section class="contentInSection hidden"><h2>In this section:</h2></section><section class="familyLinks"><div class="parentLink hidden"><br><strong>Parent topic: </strong></div><div class="previousLink hidden"><br><strong>Previous: </strong></div><div class="nextLink hidden"><br><strong>Next: </strong></div></section><section class="hidden relatedLinks "><div class="collapsible-icon sap-icon title"><h2>Related information</h2></div><ul class="fig"></ul></section></div></section></div></body></html>

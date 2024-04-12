@@ -1,0 +1,1 @@
+QUnit.config.autostart=false;sap.ui.getCore().attachInit(function(){"use strict";sap.ui.require(["sap/ui/test/Opa5","sap/ui/demo/masterdetail/test/integration/arrangements/Startup","sap/ui/demo/masterdetail/test/integration/NavigationJourney"],function(t,e){t.extendConfig({arrangements:new e,viewNamespace:"sap.ui.demo.masterdetail.view.",autoWait:true});QUnit.start()})});
